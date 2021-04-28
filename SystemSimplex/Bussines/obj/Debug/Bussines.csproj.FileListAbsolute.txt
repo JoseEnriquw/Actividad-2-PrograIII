@@ -1,0 +1,9 @@
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\bin\Debug\Bussines.dll
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\bin\Debug\Bussines.pdb
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\bin\Debug\Dominio.dll
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\bin\Debug\Dominio.pdb
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\obj\Debug\Bussines.csproj.CopyComplete
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\obj\Debug\Bussines.dll
+C:\Users\Jose\source\repos\SystemSimplex\Bussines\obj\Debug\Bussines.pdb

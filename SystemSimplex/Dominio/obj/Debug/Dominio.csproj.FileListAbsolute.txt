@@ -1,0 +1,5 @@
+C:\Users\Jose\source\repos\SystemSimplex\Dominio\bin\Debug\Dominio.dll
+C:\Users\Jose\source\repos\SystemSimplex\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Jose\source\repos\SystemSimplex\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Jose\source\repos\SystemSimplex\Dominio\obj\Debug\Dominio.dll
+C:\Users\Jose\source\repos\SystemSimplex\Dominio\obj\Debug\Dominio.pdb
