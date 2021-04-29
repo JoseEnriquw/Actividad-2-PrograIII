@@ -13,3 +13,18 @@ C:\Users\Jose\source\repos\SystemSimplex\Presentacion\obj\Debug\Presentacion.csp
 C:\Users\Jose\source\repos\SystemSimplex\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Jose\source\repos\SystemSimplex\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Jose\source\repos\SystemSimplex\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\bin\Debug\Bussines.dll
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\bin\Debug\Dominio.dll
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\bin\Debug\Bussines.pdb
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\bin\Debug\Dominio.pdb
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.Window.resources
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.pdb

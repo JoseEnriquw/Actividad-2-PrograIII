@@ -32,6 +32,8 @@ namespace Presentacion
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabpageMenu = new System.Windows.Forms.TabPage();
             this.tabpageListar = new System.Windows.Forms.TabPage();
+            this.comboBoxCate_Marca = new System.Windows.Forms.ComboBox();
+            this.labelCategorias_o_Marcas = new System.Windows.Forms.Label();
             this.labelRangoPreciolistar = new System.Windows.Forms.Label();
             this.textBoxPrecioMAX = new System.Windows.Forms.TextBox();
             this.textBoxPrecioMIN = new System.Windows.Forms.TextBox();
@@ -41,20 +43,24 @@ namespace Presentacion
             this.dataGridViewListar = new System.Windows.Forms.DataGridView();
             this.tabpageME = new System.Windows.Forms.TabPage();
             this.tabpageAgregar = new System.Windows.Forms.TabPage();
-            this.labelPrecio = new System.Windows.Forms.Label();
-            this.labelNombre = new System.Windows.Forms.Label();
-            this.labelCodigo = new System.Windows.Forms.Label();
-            this.labelID = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.labelCategoria = new System.Windows.Forms.Label();
-            this.labelMarca = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxUrlAdd = new System.Windows.Forms.TextBox();
+            this.labelUrlAdd = new System.Windows.Forms.Label();
+            this.textBoxDescripAdd = new System.Windows.Forms.TextBox();
+            this.labelDescripAdd = new System.Windows.Forms.Label();
+            this.labelPrecioAdd = new System.Windows.Forms.Label();
+            this.labelNombreAdd = new System.Windows.Forms.Label();
+            this.labelCodigoAdd = new System.Windows.Forms.Label();
+            this.labelIdAdd = new System.Windows.Forms.Label();
+            this.textBoxPrecioAdd = new System.Windows.Forms.TextBox();
+            this.textBoxNombreAdd = new System.Windows.Forms.TextBox();
+            this.textBoxCodAdd = new System.Windows.Forms.TextBox();
+            this.textBoxIdAdd = new System.Windows.Forms.TextBox();
+            this.labelCategoriaAdd = new System.Windows.Forms.Label();
+            this.labelMarcaAdd = new System.Windows.Forms.Label();
+            this.comboBoxCategoriaAdd = new System.Windows.Forms.ComboBox();
+            this.comboBoxMarcaAdd = new System.Windows.Forms.ComboBox();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.labelPictureBox = new System.Windows.Forms.Label();
+            this.labelImagenAdd = new System.Windows.Forms.Label();
             this.pictureBoxAdd = new System.Windows.Forms.PictureBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.listarArticuloPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,14 +71,12 @@ namespace Presentacion
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descripcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rangoDePrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelCategorias_o_Marcas = new System.Windows.Forms.Label();
-            this.comboBoxCate_Marca = new System.Windows.Forms.ComboBox();
-            this.rangoDePrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl.SuspendLayout();
             this.tabpageListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListar)).BeginInit();
@@ -121,6 +125,23 @@ namespace Presentacion
             this.tabpageListar.TabIndex = 1;
             this.tabpageListar.Text = "Listar";
             this.tabpageListar.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxCate_Marca
+            // 
+            this.comboBoxCate_Marca.FormattingEnabled = true;
+            this.comboBoxCate_Marca.Location = new System.Drawing.Point(598, 38);
+            this.comboBoxCate_Marca.Name = "comboBoxCate_Marca";
+            this.comboBoxCate_Marca.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCate_Marca.TabIndex = 7;
+            // 
+            // labelCategorias_o_Marcas
+            // 
+            this.labelCategorias_o_Marcas.AutoSize = true;
+            this.labelCategorias_o_Marcas.Location = new System.Drawing.Point(595, 22);
+            this.labelCategorias_o_Marcas.Name = "labelCategorias_o_Marcas";
+            this.labelCategorias_o_Marcas.Size = new System.Drawing.Size(0, 13);
+            this.labelCategorias_o_Marcas.TabIndex = 6;
+            this.labelCategorias_o_Marcas.Visible = false;
             // 
             // labelRangoPreciolistar
             // 
@@ -197,20 +218,24 @@ namespace Presentacion
             // 
             // tabpageAgregar
             // 
-            this.tabpageAgregar.Controls.Add(this.labelPrecio);
-            this.tabpageAgregar.Controls.Add(this.labelNombre);
-            this.tabpageAgregar.Controls.Add(this.labelCodigo);
-            this.tabpageAgregar.Controls.Add(this.labelID);
-            this.tabpageAgregar.Controls.Add(this.textBox4);
-            this.tabpageAgregar.Controls.Add(this.textBox3);
-            this.tabpageAgregar.Controls.Add(this.textBox2);
-            this.tabpageAgregar.Controls.Add(this.textBox1);
-            this.tabpageAgregar.Controls.Add(this.labelCategoria);
-            this.tabpageAgregar.Controls.Add(this.labelMarca);
-            this.tabpageAgregar.Controls.Add(this.comboBox2);
-            this.tabpageAgregar.Controls.Add(this.comboBox1);
+            this.tabpageAgregar.Controls.Add(this.textBoxUrlAdd);
+            this.tabpageAgregar.Controls.Add(this.labelUrlAdd);
+            this.tabpageAgregar.Controls.Add(this.textBoxDescripAdd);
+            this.tabpageAgregar.Controls.Add(this.labelDescripAdd);
+            this.tabpageAgregar.Controls.Add(this.labelPrecioAdd);
+            this.tabpageAgregar.Controls.Add(this.labelNombreAdd);
+            this.tabpageAgregar.Controls.Add(this.labelCodigoAdd);
+            this.tabpageAgregar.Controls.Add(this.labelIdAdd);
+            this.tabpageAgregar.Controls.Add(this.textBoxPrecioAdd);
+            this.tabpageAgregar.Controls.Add(this.textBoxNombreAdd);
+            this.tabpageAgregar.Controls.Add(this.textBoxCodAdd);
+            this.tabpageAgregar.Controls.Add(this.textBoxIdAdd);
+            this.tabpageAgregar.Controls.Add(this.labelCategoriaAdd);
+            this.tabpageAgregar.Controls.Add(this.labelMarcaAdd);
+            this.tabpageAgregar.Controls.Add(this.comboBoxCategoriaAdd);
+            this.tabpageAgregar.Controls.Add(this.comboBoxMarcaAdd);
             this.tabpageAgregar.Controls.Add(this.buttonAdd);
-            this.tabpageAgregar.Controls.Add(this.labelPictureBox);
+            this.tabpageAgregar.Controls.Add(this.labelImagenAdd);
             this.tabpageAgregar.Controls.Add(this.pictureBoxAdd);
             this.tabpageAgregar.Location = new System.Drawing.Point(4, 22);
             this.tabpageAgregar.Name = "tabpageAgregar";
@@ -219,128 +244,173 @@ namespace Presentacion
             this.tabpageAgregar.Text = "Agregar";
             this.tabpageAgregar.UseVisualStyleBackColor = true;
             // 
-            // labelPrecio
+            // textBoxUrlAdd
             // 
-            this.labelPrecio.AutoSize = true;
-            this.labelPrecio.Location = new System.Drawing.Point(356, 61);
-            this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(37, 13);
-            this.labelPrecio.TabIndex = 14;
-            this.labelPrecio.Text = "Precio";
+            this.textBoxUrlAdd.Location = new System.Drawing.Point(14, 373);
+            this.textBoxUrlAdd.Multiline = true;
+            this.textBoxUrlAdd.Name = "textBoxUrlAdd";
+            this.textBoxUrlAdd.Size = new System.Drawing.Size(448, 25);
+            this.textBoxUrlAdd.TabIndex = 18;
+            this.textBoxUrlAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
-            // labelNombre
+            // labelUrlAdd
             // 
-            this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(235, 61);
-            this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(44, 13);
-            this.labelNombre.TabIndex = 13;
-            this.labelNombre.Text = "Nombre";
+            this.labelUrlAdd.AutoSize = true;
+            this.labelUrlAdd.Location = new System.Drawing.Point(11, 354);
+            this.labelUrlAdd.Name = "labelUrlAdd";
+            this.labelUrlAdd.Size = new System.Drawing.Size(66, 13);
+            this.labelUrlAdd.TabIndex = 17;
+            this.labelUrlAdd.Text = "URL imagen";
             // 
-            // labelCodigo
+            // textBoxDescripAdd
             // 
-            this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Location = new System.Drawing.Point(113, 61);
-            this.labelCodigo.Name = "labelCodigo";
-            this.labelCodigo.Size = new System.Drawing.Size(40, 13);
-            this.labelCodigo.TabIndex = 12;
-            this.labelCodigo.Text = "Codigo";
+            this.textBoxDescripAdd.Location = new System.Drawing.Point(14, 157);
+            this.textBoxDescripAdd.Multiline = true;
+            this.textBoxDescripAdd.Name = "textBoxDescripAdd";
+            this.textBoxDescripAdd.Size = new System.Drawing.Size(448, 194);
+            this.textBoxDescripAdd.TabIndex = 16;
+            this.textBoxDescripAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
-            // labelID
+            // labelDescripAdd
             // 
-            this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(10, 61);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(90, 13);
-            this.labelID.TabIndex = 11;
-            this.labelID.Text = "Id (Autonumerico)";
+            this.labelDescripAdd.AutoSize = true;
+            this.labelDescripAdd.Location = new System.Drawing.Point(11, 141);
+            this.labelDescripAdd.Name = "labelDescripAdd";
+            this.labelDescripAdd.Size = new System.Drawing.Size(63, 13);
+            this.labelDescripAdd.TabIndex = 15;
+            this.labelDescripAdd.Text = "Descripcion";
             // 
-            // textBox4
+            // labelPrecioAdd
             // 
-            this.textBox4.Location = new System.Drawing.Point(359, 77);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(102, 20);
-            this.textBox4.TabIndex = 10;
+            this.labelPrecioAdd.AutoSize = true;
+            this.labelPrecioAdd.Location = new System.Drawing.Point(356, 61);
+            this.labelPrecioAdd.Name = "labelPrecioAdd";
+            this.labelPrecioAdd.Size = new System.Drawing.Size(37, 13);
+            this.labelPrecioAdd.TabIndex = 14;
+            this.labelPrecioAdd.Text = "Precio";
             // 
-            // textBox3
+            // labelNombreAdd
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(115, 20);
-            this.textBox3.TabIndex = 9;
+            this.labelNombreAdd.AutoSize = true;
+            this.labelNombreAdd.Location = new System.Drawing.Point(235, 61);
+            this.labelNombreAdd.Name = "labelNombreAdd";
+            this.labelNombreAdd.Size = new System.Drawing.Size(44, 13);
+            this.labelNombreAdd.TabIndex = 13;
+            this.labelNombreAdd.Text = "Nombre";
             // 
-            // textBox2
+            // labelCodigoAdd
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(116, 20);
-            this.textBox2.TabIndex = 8;
+            this.labelCodigoAdd.AutoSize = true;
+            this.labelCodigoAdd.Location = new System.Drawing.Point(113, 61);
+            this.labelCodigoAdd.Name = "labelCodigoAdd";
+            this.labelCodigoAdd.Size = new System.Drawing.Size(40, 13);
+            this.labelCodigoAdd.TabIndex = 12;
+            this.labelCodigoAdd.Text = "Codigo";
             // 
-            // textBox1
+            // labelIdAdd
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 20);
-            this.textBox1.TabIndex = 7;
+            this.labelIdAdd.AutoSize = true;
+            this.labelIdAdd.Location = new System.Drawing.Point(10, 61);
+            this.labelIdAdd.Name = "labelIdAdd";
+            this.labelIdAdd.Size = new System.Drawing.Size(90, 13);
+            this.labelIdAdd.TabIndex = 11;
+            this.labelIdAdd.Text = "Id (Autonumerico)";
             // 
-            // labelCategoria
+            // textBoxPrecioAdd
             // 
-            this.labelCategoria.AutoSize = true;
-            this.labelCategoria.Location = new System.Drawing.Point(220, 117);
-            this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(52, 13);
-            this.labelCategoria.TabIndex = 6;
-            this.labelCategoria.Text = "Categoria";
+            this.textBoxPrecioAdd.Location = new System.Drawing.Point(359, 77);
+            this.textBoxPrecioAdd.Name = "textBoxPrecioAdd";
+            this.textBoxPrecioAdd.Size = new System.Drawing.Size(102, 20);
+            this.textBoxPrecioAdd.TabIndex = 10;
+            this.textBoxPrecioAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
-            // labelMarca
+            // textBoxNombreAdd
             // 
-            this.labelMarca.AutoSize = true;
-            this.labelMarca.Location = new System.Drawing.Point(10, 117);
-            this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(37, 13);
-            this.labelMarca.TabIndex = 5;
-            this.labelMarca.Text = "Marca";
+            this.textBoxNombreAdd.Location = new System.Drawing.Point(238, 77);
+            this.textBoxNombreAdd.Name = "textBoxNombreAdd";
+            this.textBoxNombreAdd.Size = new System.Drawing.Size(115, 20);
+            this.textBoxNombreAdd.TabIndex = 9;
+            this.textBoxNombreAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
-            // comboBox2
+            // textBoxCodAdd
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(223, 133);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(192, 21);
-            this.comboBox2.TabIndex = 4;
+            this.textBoxCodAdd.Location = new System.Drawing.Point(116, 77);
+            this.textBoxCodAdd.Name = "textBoxCodAdd";
+            this.textBoxCodAdd.Size = new System.Drawing.Size(116, 20);
+            this.textBoxCodAdd.TabIndex = 8;
+            this.textBoxCodAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
-            // comboBox1
+            // textBoxIdAdd
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 133);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 21);
-            this.comboBox1.TabIndex = 3;
+            this.textBoxIdAdd.Enabled = false;
+            this.textBoxIdAdd.Location = new System.Drawing.Point(13, 77);
+            this.textBoxIdAdd.Name = "textBoxIdAdd";
+            this.textBoxIdAdd.Size = new System.Drawing.Size(97, 20);
+            this.textBoxIdAdd.TabIndex = 7;
+            // 
+            // labelCategoriaAdd
+            // 
+            this.labelCategoriaAdd.AutoSize = true;
+            this.labelCategoriaAdd.Location = new System.Drawing.Point(235, 101);
+            this.labelCategoriaAdd.Name = "labelCategoriaAdd";
+            this.labelCategoriaAdd.Size = new System.Drawing.Size(52, 13);
+            this.labelCategoriaAdd.TabIndex = 6;
+            this.labelCategoriaAdd.Text = "Categoria";
+            // 
+            // labelMarcaAdd
+            // 
+            this.labelMarcaAdd.AutoSize = true;
+            this.labelMarcaAdd.Location = new System.Drawing.Point(10, 101);
+            this.labelMarcaAdd.Name = "labelMarcaAdd";
+            this.labelMarcaAdd.Size = new System.Drawing.Size(37, 13);
+            this.labelMarcaAdd.TabIndex = 5;
+            this.labelMarcaAdd.Text = "Marca";
+            // 
+            // comboBoxCategoriaAdd
+            // 
+            this.comboBoxCategoriaAdd.FormattingEnabled = true;
+            this.comboBoxCategoriaAdd.Location = new System.Drawing.Point(238, 117);
+            this.comboBoxCategoriaAdd.Name = "comboBoxCategoriaAdd";
+            this.comboBoxCategoriaAdd.Size = new System.Drawing.Size(223, 21);
+            this.comboBoxCategoriaAdd.TabIndex = 4;
+            this.comboBoxCategoriaAdd.SelectedIndexChanged += new System.EventHandler(this.changedAddVerific);
+            // 
+            // comboBoxMarcaAdd
+            // 
+            this.comboBoxMarcaAdd.FormattingEnabled = true;
+            this.comboBoxMarcaAdd.Location = new System.Drawing.Point(13, 117);
+            this.comboBoxMarcaAdd.Name = "comboBoxMarcaAdd";
+            this.comboBoxMarcaAdd.Size = new System.Drawing.Size(219, 21);
+            this.comboBoxMarcaAdd.TabIndex = 3;
+            this.comboBoxMarcaAdd.SelectedIndexChanged += new System.EventHandler(this.changedAddVerific);
             // 
             // buttonAdd
             // 
+            this.buttonAdd.Enabled = false;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(467, 340);
+            this.buttonAdd.Location = new System.Drawing.Point(467, 373);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(299, 25);
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "AGREGAR";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // labelPictureBox
+            // labelImagenAdd
             // 
-            this.labelPictureBox.AutoSize = true;
-            this.labelPictureBox.Location = new System.Drawing.Point(509, 52);
-            this.labelPictureBox.Name = "labelPictureBox";
-            this.labelPictureBox.Size = new System.Drawing.Size(104, 13);
-            this.labelPictureBox.TabIndex = 1;
-            this.labelPictureBox.Text = "Imagen del producto";
+            this.labelImagenAdd.AutoSize = true;
+            this.labelImagenAdd.Location = new System.Drawing.Point(464, 61);
+            this.labelImagenAdd.Name = "labelImagenAdd";
+            this.labelImagenAdd.Size = new System.Drawing.Size(104, 13);
+            this.labelImagenAdd.TabIndex = 1;
+            this.labelImagenAdd.Text = "Imagen del producto";
             // 
             // pictureBoxAdd
             // 
+            this.pictureBoxAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxAdd.Location = new System.Drawing.Point(467, 77);
             this.pictureBoxAdd.Name = "pictureBoxAdd";
-            this.pictureBoxAdd.Size = new System.Drawing.Size(299, 257);
+            this.pictureBoxAdd.Size = new System.Drawing.Size(299, 290);
             this.pictureBoxAdd.TabIndex = 0;
             this.pictureBoxAdd.TabStop = false;
             // 
@@ -374,48 +444,54 @@ namespace Presentacion
             // todoToolStripMenuItem
             // 
             this.todoToolStripMenuItem.Name = "todoToolStripMenuItem";
-            this.todoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.todoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.todoToolStripMenuItem.Text = "Todo";
             this.todoToolStripMenuItem.Click += new System.EventHandler(this.todoToolStripMenuItem_Click);
             // 
             // IDToolStripMenuItem
             // 
             this.IDToolStripMenuItem.Name = "IDToolStripMenuItem";
-            this.IDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.IDToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.IDToolStripMenuItem.Text = "ID";
             this.IDToolStripMenuItem.Click += new System.EventHandler(this.iDToolStripMenuItem_Click);
             // 
             // codigoToolStripMenuItem
             // 
             this.codigoToolStripMenuItem.Name = "codigoToolStripMenuItem";
-            this.codigoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.codigoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.codigoToolStripMenuItem.Text = "Codigo";
             this.codigoToolStripMenuItem.Click += new System.EventHandler(this.codigoDeArticuloToolStripMenuItem_Click);
             // 
             // nombreDeArticulToolStripMenuItem
             // 
             this.nombreDeArticulToolStripMenuItem.Name = "nombreDeArticulToolStripMenuItem";
-            this.nombreDeArticulToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nombreDeArticulToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.nombreDeArticulToolStripMenuItem.Text = "Nombre";
             this.nombreDeArticulToolStripMenuItem.Click += new System.EventHandler(this.nombreDeArticulToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
             // 
             // descripcionToolStripMenuItem
             // 
             this.descripcionToolStripMenuItem.Name = "descripcionToolStripMenuItem";
-            this.descripcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.descripcionToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.descripcionToolStripMenuItem.Text = "Descripcion";
+            // 
+            // rangoDePrecioToolStripMenuItem
+            // 
+            this.rangoDePrecioToolStripMenuItem.Name = "rangoDePrecioToolStripMenuItem";
+            this.rangoDePrecioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.rangoDePrecioToolStripMenuItem.Text = "Rango de Precio";
             // 
             // actualizarToolStripMenuItem
             // 
@@ -430,8 +506,9 @@ namespace Presentacion
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarToolStripMenuItem.Text = "Agregar Articulo";
+            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
@@ -450,29 +527,6 @@ namespace Presentacion
             this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
             this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.configuracionToolStripMenuItem.Text = "Configuracion";
-            // 
-            // labelCategorias_o_Marcas
-            // 
-            this.labelCategorias_o_Marcas.AutoSize = true;
-            this.labelCategorias_o_Marcas.Location = new System.Drawing.Point(595, 22);
-            this.labelCategorias_o_Marcas.Name = "labelCategorias_o_Marcas";
-            this.labelCategorias_o_Marcas.Size = new System.Drawing.Size(0, 13);
-            this.labelCategorias_o_Marcas.TabIndex = 6;
-            this.labelCategorias_o_Marcas.Visible = false;
-            // 
-            // comboBoxCate_Marca
-            // 
-            this.comboBoxCate_Marca.FormattingEnabled = true;
-            this.comboBoxCate_Marca.Location = new System.Drawing.Point(598, 38);
-            this.comboBoxCate_Marca.Name = "comboBoxCate_Marca";
-            this.comboBoxCate_Marca.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxCate_Marca.TabIndex = 7;
-            // 
-            // rangoDePrecioToolStripMenuItem
-            // 
-            this.rangoDePrecioToolStripMenuItem.Name = "rangoDePrecioToolStripMenuItem";
-            this.rangoDePrecioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rangoDePrecioToolStripMenuItem.Text = "Rango de Precio";
             // 
             // Window
             // 
@@ -513,21 +567,6 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarArticuloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
-        private System.Windows.Forms.Label labelPrecio;
-        private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.Label labelCodigo;
-        private System.Windows.Forms.Label labelID;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label labelCategoria;
-        private System.Windows.Forms.Label labelMarca;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Label labelPictureBox;
-        private System.Windows.Forms.PictureBox pictureBoxAdd;
         private System.Windows.Forms.Label labelRangoPreciolistar;
         private System.Windows.Forms.TextBox textBoxPrecioMAX;
         private System.Windows.Forms.TextBox textBoxPrecioMIN;
@@ -543,6 +582,25 @@ namespace Presentacion
         private System.Windows.Forms.ComboBox comboBoxCate_Marca;
         private System.Windows.Forms.Label labelCategorias_o_Marcas;
         private System.Windows.Forms.ToolStripMenuItem rangoDePrecioToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxUrlAdd;
+        private System.Windows.Forms.Label labelUrlAdd;
+        private System.Windows.Forms.TextBox textBoxDescripAdd;
+        private System.Windows.Forms.Label labelDescripAdd;
+        private System.Windows.Forms.Label labelPrecioAdd;
+        private System.Windows.Forms.Label labelNombreAdd;
+        private System.Windows.Forms.Label labelCodigoAdd;
+        private System.Windows.Forms.Label labelIdAdd;
+        private System.Windows.Forms.TextBox textBoxPrecioAdd;
+        private System.Windows.Forms.TextBox textBoxNombreAdd;
+        private System.Windows.Forms.TextBox textBoxCodAdd;
+        private System.Windows.Forms.TextBox textBoxIdAdd;
+        private System.Windows.Forms.Label labelCategoriaAdd;
+        private System.Windows.Forms.Label labelMarcaAdd;
+        private System.Windows.Forms.ComboBox comboBoxCategoriaAdd;
+        private System.Windows.Forms.ComboBox comboBoxMarcaAdd;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Label labelImagenAdd;
+        private System.Windows.Forms.PictureBox pictureBoxAdd;
     }
 }
 
