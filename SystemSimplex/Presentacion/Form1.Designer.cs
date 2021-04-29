@@ -29,14 +29,13 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabpageMenu = new System.Windows.Forms.TabPage();
             this.tabpageListar = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.labelRangoPreciolistar = new System.Windows.Forms.Label();
+            this.textBoxPrecioMAX = new System.Windows.Forms.TextBox();
+            this.textBoxPrecioMIN = new System.Windows.Forms.TextBox();
+            this.textBoxListar = new System.Windows.Forms.TextBox();
             this.labelListar = new System.Windows.Forms.Label();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.dataGridViewListar = new System.Windows.Forms.DataGridView();
@@ -60,7 +59,7 @@ namespace Presentacion
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.listarArticuloPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.IDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.codigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nombreDeArticulToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,14 +70,15 @@ namespace Presentacion
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.labelCategorias_o_Marcas = new System.Windows.Forms.Label();
+            this.comboBoxCate_Marca = new System.Windows.Forms.ComboBox();
+            this.rangoDePrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl.SuspendLayout();
             this.tabpageListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListar)).BeginInit();
             this.tabpageAgregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdd)).BeginInit();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -105,10 +105,12 @@ namespace Presentacion
             // 
             // tabpageListar
             // 
-            this.tabpageListar.Controls.Add(this.label2);
-            this.tabpageListar.Controls.Add(this.textBox7);
-            this.tabpageListar.Controls.Add(this.textBox6);
-            this.tabpageListar.Controls.Add(this.textBox5);
+            this.tabpageListar.Controls.Add(this.comboBoxCate_Marca);
+            this.tabpageListar.Controls.Add(this.labelCategorias_o_Marcas);
+            this.tabpageListar.Controls.Add(this.labelRangoPreciolistar);
+            this.tabpageListar.Controls.Add(this.textBoxPrecioMAX);
+            this.tabpageListar.Controls.Add(this.textBoxPrecioMIN);
+            this.tabpageListar.Controls.Add(this.textBoxListar);
             this.tabpageListar.Controls.Add(this.labelListar);
             this.tabpageListar.Controls.Add(this.buttonBuscar);
             this.tabpageListar.Controls.Add(this.dataGridViewListar);
@@ -120,35 +122,39 @@ namespace Presentacion
             this.tabpageListar.Text = "Listar";
             this.tabpageListar.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // labelRangoPreciolistar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(503, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.labelRangoPreciolistar.AutoSize = true;
+            this.labelRangoPreciolistar.Location = new System.Drawing.Point(342, 17);
+            this.labelRangoPreciolistar.Name = "labelRangoPreciolistar";
+            this.labelRangoPreciolistar.Size = new System.Drawing.Size(172, 13);
+            this.labelRangoPreciolistar.TabIndex = 3;
+            this.labelRangoPreciolistar.Text = "Precio Mínimo y Máximo del  rango";
+            this.labelRangoPreciolistar.Visible = false;
             // 
-            // textBox7
+            // textBoxPrecioMAX
             // 
-            this.textBox7.Location = new System.Drawing.Point(536, 38);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(56, 20);
-            this.textBox7.TabIndex = 5;
+            this.textBoxPrecioMAX.Location = new System.Drawing.Point(445, 38);
+            this.textBoxPrecioMAX.Name = "textBoxPrecioMAX";
+            this.textBoxPrecioMAX.Size = new System.Drawing.Size(56, 20);
+            this.textBoxPrecioMAX.TabIndex = 5;
+            this.textBoxPrecioMAX.Visible = false;
             // 
-            // textBox6
+            // textBoxPrecioMIN
             // 
-            this.textBox6.Location = new System.Drawing.Point(453, 38);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(56, 20);
-            this.textBox6.TabIndex = 4;
+            this.textBoxPrecioMIN.Location = new System.Drawing.Point(345, 38);
+            this.textBoxPrecioMIN.Name = "textBoxPrecioMIN";
+            this.textBoxPrecioMIN.Size = new System.Drawing.Size(56, 20);
+            this.textBoxPrecioMIN.TabIndex = 4;
+            this.textBoxPrecioMIN.Visible = false;
             // 
-            // textBox5
+            // textBoxListar
             // 
-            this.textBox5.Location = new System.Drawing.Point(35, 35);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(264, 20);
-            this.textBox5.TabIndex = 3;
+            this.textBoxListar.Location = new System.Drawing.Point(53, 38);
+            this.textBoxListar.Name = "textBoxListar";
+            this.textBoxListar.Size = new System.Drawing.Size(264, 20);
+            this.textBoxListar.TabIndex = 3;
+            this.textBoxListar.Visible = false;
             // 
             // labelListar
             // 
@@ -157,12 +163,15 @@ namespace Presentacion
             this.labelListar.Name = "labelListar";
             this.labelListar.Size = new System.Drawing.Size(0, 13);
             this.labelListar.TabIndex = 2;
+            this.labelListar.Visible = false;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(341, 35);
+            this.buttonBuscar.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.ForeColor = System.Drawing.Color.DarkViolet;
+            this.buttonBuscar.Location = new System.Drawing.Point(229, 360);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(305, 38);
             this.buttonBuscar.TabIndex = 1;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -171,7 +180,7 @@ namespace Presentacion
             // dataGridViewListar
             // 
             this.dataGridViewListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListar.Location = new System.Drawing.Point(22, 83);
+            this.dataGridViewListar.Location = new System.Drawing.Point(17, 64);
             this.dataGridViewListar.Name = "dataGridViewListar";
             this.dataGridViewListar.Size = new System.Drawing.Size(728, 290);
             this.dataGridViewListar.TabIndex = 0;
@@ -351,12 +360,13 @@ namespace Presentacion
             // 
             this.listarArticuloPorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.todoToolStripMenuItem,
-            this.iDToolStripMenuItem,
+            this.IDToolStripMenuItem,
             this.codigoToolStripMenuItem,
             this.nombreDeArticulToolStripMenuItem,
             this.marcaToolStripMenuItem,
             this.categoriaToolStripMenuItem,
-            this.descripcionToolStripMenuItem});
+            this.descripcionToolStripMenuItem,
+            this.rangoDePrecioToolStripMenuItem});
             this.listarArticuloPorToolStripMenuItem.Name = "listarArticuloPorToolStripMenuItem";
             this.listarArticuloPorToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
             this.listarArticuloPorToolStripMenuItem.Text = "Listar Articulo Por";
@@ -368,11 +378,12 @@ namespace Presentacion
             this.todoToolStripMenuItem.Text = "Todo";
             this.todoToolStripMenuItem.Click += new System.EventHandler(this.todoToolStripMenuItem_Click);
             // 
-            // iDToolStripMenuItem
+            // IDToolStripMenuItem
             // 
-            this.iDToolStripMenuItem.Name = "iDToolStripMenuItem";
-            this.iDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.iDToolStripMenuItem.Text = "ID";
+            this.IDToolStripMenuItem.Name = "IDToolStripMenuItem";
+            this.IDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.IDToolStripMenuItem.Text = "ID";
+            this.IDToolStripMenuItem.Click += new System.EventHandler(this.iDToolStripMenuItem_Click);
             // 
             // codigoToolStripMenuItem
             // 
@@ -386,6 +397,7 @@ namespace Presentacion
             this.nombreDeArticulToolStripMenuItem.Name = "nombreDeArticulToolStripMenuItem";
             this.nombreDeArticulToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nombreDeArticulToolStripMenuItem.Text = "Nombre";
+            this.nombreDeArticulToolStripMenuItem.Click += new System.EventHandler(this.nombreDeArticulToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
@@ -439,9 +451,28 @@ namespace Presentacion
             this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.configuracionToolStripMenuItem.Text = "Configuracion";
             // 
-            // errorProvider1
+            // labelCategorias_o_Marcas
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.labelCategorias_o_Marcas.AutoSize = true;
+            this.labelCategorias_o_Marcas.Location = new System.Drawing.Point(595, 22);
+            this.labelCategorias_o_Marcas.Name = "labelCategorias_o_Marcas";
+            this.labelCategorias_o_Marcas.Size = new System.Drawing.Size(0, 13);
+            this.labelCategorias_o_Marcas.TabIndex = 6;
+            this.labelCategorias_o_Marcas.Visible = false;
+            // 
+            // comboBoxCate_Marca
+            // 
+            this.comboBoxCate_Marca.FormattingEnabled = true;
+            this.comboBoxCate_Marca.Location = new System.Drawing.Point(598, 38);
+            this.comboBoxCate_Marca.Name = "comboBoxCate_Marca";
+            this.comboBoxCate_Marca.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCate_Marca.TabIndex = 7;
+            // 
+            // rangoDePrecioToolStripMenuItem
+            // 
+            this.rangoDePrecioToolStripMenuItem.Name = "rangoDePrecioToolStripMenuItem";
+            this.rangoDePrecioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rangoDePrecioToolStripMenuItem.Text = "Rango de Precio";
             // 
             // Window
             // 
@@ -461,7 +492,6 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdd)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,19 +528,21 @@ namespace Presentacion
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label labelPictureBox;
         private System.Windows.Forms.PictureBox pictureBoxAdd;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label labelRangoPreciolistar;
+        private System.Windows.Forms.TextBox textBoxPrecioMAX;
+        private System.Windows.Forms.TextBox textBoxPrecioMIN;
+        private System.Windows.Forms.TextBox textBoxListar;
         private System.Windows.Forms.Label labelListar;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.DataGridView dataGridViewListar;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ToolStripMenuItem todoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem descripcionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem iDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem IDToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBoxCate_Marca;
+        private System.Windows.Forms.Label labelCategorias_o_Marcas;
+        private System.Windows.Forms.ToolStripMenuItem rangoDePrecioToolStripMenuItem;
     }
 }
 
