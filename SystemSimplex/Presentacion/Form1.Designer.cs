@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Window
+    partial class systemSimplex
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -407,10 +407,13 @@ namespace Presentacion
             // 
             // pictureBoxAdd
             // 
+            this.pictureBoxAdd.BackColor = System.Drawing.Color.Black;
+            this.pictureBoxAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxAdd.Location = new System.Drawing.Point(467, 77);
             this.pictureBoxAdd.Name = "pictureBoxAdd";
             this.pictureBoxAdd.Size = new System.Drawing.Size(299, 290);
+            this.pictureBoxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAdd.TabIndex = 0;
             this.pictureBoxAdd.TabStop = false;
             // 
@@ -506,7 +509,7 @@ namespace Presentacion
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.agregarToolStripMenuItem.Text = "Agregar Articulo";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
@@ -528,15 +531,16 @@ namespace Presentacion
             this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
             this.configuracionToolStripMenuItem.Text = "Configuracion";
             // 
-            // Window
+            // systemSimplex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.tabControl);
-            this.Name = "Window";
+            this.Name = "systemSimplex";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Window_Load);
             this.tabControl.ResumeLayout(false);
             this.tabpageListar.ResumeLayout(false);
             this.tabpageListar.PerformLayout();

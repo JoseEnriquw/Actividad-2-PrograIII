@@ -10,9 +10,18 @@ namespace Presentacion
 {
     public class AccessData
     {
+        public string host { get; set; }
+        public string database { get; set; }
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
+
+        public AccessData()
+        {
+            string connection = "data source=" + host + ";initial catalog=" + database + ";integrated security=true;";
+            conexion = new SqlConnection(connection);
+            comando = new SqlCommand();
+        }
 
         public AccessData(string connection)
         {

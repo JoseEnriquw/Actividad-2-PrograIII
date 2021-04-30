@@ -22,12 +22,14 @@ namespace Presentacion
     /// 3-Pestaña de Modificar y Eliminar("tabpageME")
     /// 4-Pestaña de Agregar; nombre("tabpageAgregar")
     
-    public partial class Window : Form
+    public partial class systemSimplex : Form
     {
-
+        Login login = new Login();
         ArticulosBussines negocio=new ArticulosBussines();
         string where = " ";
-        public Window()
+
+
+        public systemSimplex()
         {
             InitializeComponent();
         }
@@ -108,7 +110,7 @@ namespace Presentacion
 
         //Cambios agregados x adriel:
 
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e) //Agregar a 
         {
             tabControl.SelectedIndex = 3;
             comboboxsAdd();
@@ -120,7 +122,7 @@ namespace Presentacion
             textBoxPrecioAdd.Text = "";
             textBoxUrlAdd.Text = "";
             buttonAdd.Enabled = false;
-            pictureBoxAdd.Load("");
+            pictureBoxAdd.Load("https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-red-cross-with-the-outline-coming-out-png-image_1761934.jpg");
         }
 
         //Agrega los elementos al combobox marca y descripcion de Add
@@ -132,8 +134,6 @@ namespace Presentacion
                 comboBoxMarcaAdd.Items.Clear();
                 comboBoxCategoriaAdd.Items.Clear();
 
-                comboBoxCategoriaAdd.Items.Add((string)"hola");
-                comboBoxMarcaAdd.Items.Add((string)"hola");
                 //Combobox Marca
                 /*
                 conexion.Open();
@@ -179,6 +179,7 @@ namespace Presentacion
                 catch (Exception ex)
                 {
                     labelUrlAdd.ForeColor = Color.Red;
+                    pictureBoxAdd.Load("https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-red-cross-with-the-outline-coming-out-png-image_1761934.jpg");
                 }
             }
             if (textBoxUrlAdd.Text != "") { cont++; }
@@ -243,6 +244,10 @@ namespace Presentacion
             }
         }
 
-    
+        private void Window_Load(object sender, EventArgs e)
+        {
+            login.ShowDialog();
+            if (login.close == true) { this.Close(); }
+        }
     }
 }
