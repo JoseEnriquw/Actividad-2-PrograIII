@@ -11,6 +11,8 @@ using System.Data.SqlClient;
 using Bussines;
 using Dominio;
 
+using System.IO;
+
 
 namespace Presentacion
 {
@@ -28,6 +30,8 @@ namespace Presentacion
         AccessData data=new AccessData("DESKTOP-C14H989\\SQLEXPRESS", "CATALOGO_DB");
         //DESKTOP-Q2KI0EM\\SQLEXPRESS (Enrique)
         //DESKTOP-C14H989\\SQLEXPRESS (Adriel)
+        
+
         public systemSimplex()
         {
             InitializeComponent();
@@ -72,7 +76,6 @@ namespace Presentacion
         private void todoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Visibilidad(0);
-            tabControl.SelectedIndex = 1;
         }
 
         //Opción de barra de menu Listar por ID
@@ -418,6 +421,6 @@ namespace Presentacion
         private void buttonDel_MouseHover(object sender, EventArgs e){      buttonDel.BackColor = Color.Black;}
         private void buttonDel_MouseLeave(object sender, EventArgs e){      buttonDel.BackColor = Color.DimGray;}
         private void buttonAdd_MouseHover(object sender, EventArgs e){      buttonAdd.BackColor = Color.Black;}
-        private void buttonAdd_MouseLeave(object sender, EventArgs e){      buttonAdd.BackColor = Color.DimGray}
+        private void buttonAdd_MouseLeave(object sender, EventArgs e){      buttonAdd.BackColor = Color.DimGray; }
     }
 }

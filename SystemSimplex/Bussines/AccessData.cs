@@ -20,12 +20,11 @@ namespace Bussines
         public string database { get; set; }
     public AccessData()
         {
-            TextReader archivo = new StreamReader("./Connection_Database.txt");
+            TextReader archivo = new StreamReader(@"\data\archivo.txt");
             string connection = archivo.ReadToEnd();
             archivo.Close();
             conexion = new SqlConnection(connection);
             comando = new SqlCommand();
-          
         }
 
         public AccessData(string HOST,string BD)
