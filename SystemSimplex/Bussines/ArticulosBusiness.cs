@@ -12,13 +12,15 @@ namespace Bussines
         public List<Articulo> listar(string where)
         {
             List<Articulo> lista= new List<Articulo>();
-            AccessData accessdata = new AccessData("data source=DESKTOP-Q2KI0EM\\SQLEXPRESS;initial catalog=CATALOGO_DB;integrated security=true;") ;
+            //"data source=DESKTOP-Q2KI0EM\\SQLEXPRESS;initial catalog=CATALOGO_DB;integrated security=true;"
+            AccessData accessdata = new AccessData("DESKTOP-Q2KI0EM\\SQLEXPRESS", "CATALOGO_DB") ;
             try
             {
-                string consulta = "Select  .Id,A.Codigo,A.Nombre,A.Descripcion,M.Descripcion 'Marca',C.Descripcion 'Categoria'," +
+                
+                string consulta = "Select  A.Id,A.Codigo,A.Nombre,A.Descripcion,M.Descripcion 'Marca',C.Descripcion 'Categoria'," +
                     "A.ImagenUrl,A.Precio from Articulos A " +
                     "inner join Marcas M on M.Id=A.IdMarca " +
-                    "inner join Categorias C on C.Id=A.IdCategoria";
+                    "inner join Categorias C on C.Id=A.IdCategoria "+where;
                 accessdata.setearConsulta(consulta);
                 accessdata.ejecutarLectura();
                 while (accessdata.Lector.Read())
@@ -48,6 +50,8 @@ namespace Bussines
                 accessdata.cerrarConexion();
             }
         }
+
+
 
 
     }

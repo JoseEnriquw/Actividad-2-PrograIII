@@ -27,18 +27,20 @@ namespace Presentacion
         Login login = new Login();
         ArticulosBussines negocio=new ArticulosBussines();
         string where = " ";
-
+        AccessData data=new AccessData("DESKTOP-Q2KI0EM\\SQLEXPRESS", "CATALOGO_DB");
 
         public systemSimplex()
         {
             InitializeComponent();
         }
 
-
+        //Funcion para hacer visibles solos los items que se usan en el momentos
         private void Visibilidad(short aux) {
-
+            dataGridViewListar.DataSource = null;
+            where = " ";
             switch (aux){
                 case 1:
+
                     textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = comboBoxCate_Marca.Visible = labelRangoPreciolistar.Visible = labelCategorias_o_Marcas.Visible = false;
                     textBoxListar.Visible = labelListar.Visible = true;
                 break;
@@ -48,6 +50,8 @@ namespace Presentacion
                     break;
 
                 case 3:
+                    comboBoxCate_Marca.Items.Clear();
+                    comboBoxCate_Marca.Text = " ";
                     textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = textBoxListar.Visible = labelListar.Visible  = labelRangoPreciolistar.Visible = false;
                     comboBoxCate_Marca.Visible =labelCategorias_o_Marcas.Visible = true;
                     break;
@@ -60,7 +64,9 @@ namespace Presentacion
         }
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            dataGridViewListar.DataSource=negocio.listar("");
+            crear_where();
+            dataGridViewListar.DataSource=negocio.listar(where);
+            dataGridViewListar.Columns[6].Visible = false;
         }
 
         
@@ -68,6 +74,7 @@ namespace Presentacion
         //Opción de barra de menu Listar Todo
         private void todoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             Visibilidad(0);
             tabControl.SelectedIndex = 1;
            
@@ -79,31 +86,67 @@ namespace Presentacion
             Visibilidad(1);
             tabControl.SelectedIndex = 1;
             labelListar.Text = IDToolStripMenuItem.Text;
-            where = "where A.Id= '" + textBoxListar.Text + "'";
+           
         }
 
         //Opción de barra de menu Listar por Codigo de Articulo
         private void codigoDeArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Visibilidad(1);
+            
             tabControl.SelectedIndex = 1;
-            where = "where A.Codigo= '" + textBoxListar.Text + "'";
+            Visibilidad(1);
             labelListar.Text = codigoToolStripMenuItem.Text;
         }
 
         //Opción de barra de menu Listar por Nombre
         private void nombreDeArticulToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Visibilidad(1);
+            
             tabControl.SelectedIndex = 1;
-            where = "where A.Nombre= '" + textBoxListar.Text + "'";
+            Visibilidad(1);           
             labelListar.Text = nombreDeArticulToolStripMenuItem.Text;
         }
 
+        //Opción de barra de menu Listar por Descripcion
+
+        private void descripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        
+            tabControl.SelectedIndex = 1;
+            Visibilidad(1);
+            labelListar.Text = descripcionToolStripMenuItem.Text;
+
+        }
 
 
+        //Opción de barra de menu Listar por Marca
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Visibilidad(3);
+            tabControl.SelectedIndex = 1;
+           
+            labelCategorias_o_Marcas.Text = marcaToolStripMenuItem.Text;
+            Listarcombobox(ref comboBoxCate_Marca, "select * from marcas");
+        }
 
+        //Opción de barra de menu Listar por Categoria
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Visibilidad(3);
+            labelCategorias_o_Marcas.Text = categoriaToolStripMenuItem.Text;
+            Listarcombobox(ref comboBoxCate_Marca, "select * from categorias"); 
 
+        }
+
+        //Opcion de barra de menu Listar por Rango de precio
+        private void rangoDePrecioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            tabControl.SelectedIndex = 1;
+            Visibilidad(2);
+            textBoxPrecioMAX.Text = textBoxPrecioMIN.Text=" ";
+
+        }
 
 
 
@@ -135,26 +178,13 @@ namespace Presentacion
                 comboBoxCategoriaAdd.Items.Clear();
 
                 //Combobox Marca
-                /*
-                conexion.Open();
-                SqlCommand comandoMarcas = new SqlCommand("select * from marcas", conexion);
-                SqlDataReader lectorMarcas = comandoMarcas.ExecuteReader();
-                while (lectorMarcas.Read())
-                {
-                    comboBoxMarcaAdd.Items.Add((string)lectorMarcas["descripcion"]);
-                }
-                conexion.Close();*/
+                Listarcombobox(ref comboBoxMarcaAdd,"select * from marcas");
+
+
 
                 //Combobox Categoria
-                /*
-                conexion.Open();
-                SqlCommand comandoCateg = new SqlCommand("select * from categorias", conexion);
-                SqlDataReader lectorCateg = comandoCateg.ExecuteReader();
-                while (lectorCateg.Read())
-                {
-                    comboBoxCategoriasAdd.Items.Add((string)lectorCateg["descripcion"]);
-                }
-                conexion.Close();*/
+                Listarcombobox(ref comboBoxCategoriaAdd, "select * from categorias");
+         
 
                 //Inabilitar boton agregar
                 buttonAdd.Enabled = false;
@@ -190,18 +220,7 @@ namespace Presentacion
             if (cont == 7)
             {
                 buttonAdd.Enabled = true;
-                /*
-                conexion.Open();
-                SqlCommand comandoId = new SqlCommand("select * from articulos", conexion);
-                SqlDataReader lectorId = comandoId.ExecuteReader();
-                int UltimaId = 1;
-                while (lectorId.Read())
-                {
-                    UltimaId++;
-                }
-                textBoxIdAdd.Text = UltimaId.ToString();
-                conexion.Close();
-                */
+        
             }
             else { buttonAdd.Enabled = false; }
         }
@@ -223,12 +242,7 @@ namespace Presentacion
                     queryAdd += comboBoxCategoriaAdd.SelectedIndex + ",'";
                     queryAdd += textBoxUrlAdd.Text + "',";
                     queryAdd += textBoxPrecioAdd.Text + ")";
-                    /*
-                    conexion.Open();
-                    SqlCommand comandoAdd = new SqlCommand(queryAdd, conexion);
-                    SqlDataAdapter data = new SqlDataAdapter(comandoAdd);
-                    conexion.Close();
-                    */
+               
                     break;
                 case "Cancel":
                     //Reiniciar campos
@@ -244,10 +258,78 @@ namespace Presentacion
             }
         }
 
+        //Cargar el Login
         private void Window_Load(object sender, EventArgs e)
         {
-            login.ShowDialog();
-            if (login.close == true) { this.Close(); }
+           // login.ShowDialog();
+            //if (login.close) { this.Close(); }
+          
         }
+        
+        //Se usa para agregar los items al combox en tiempo real
+        private void Listarcombobox(ref ComboBox aux,string consulta)
+        {
+            
+            try
+            {
+                data.setearConsulta(consulta);
+                data.ejecutarLectura();
+
+                while (data.Lector.Read())
+                {
+                    aux.Items.Add((string)data.Lector["descripcion"]);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                data.cerrarConexion();
+            }
+        }
+
+        private void crear_where()
+        {
+          if(labelListar.Visible && labelListar.Text=="ID" && textBoxListar.TextLength > 0)
+            {
+                where = "where A.Id= '" + textBoxListar.Text + "'";
+            }
+
+            if (labelListar.Visible && labelListar.Text == "Codigo" && textBoxListar.TextLength > 0)
+            {
+                where = "where A.Codigo like  '%" + textBoxListar.Text + "%'";
+            }
+
+            if (labelListar.Visible && labelListar.Text == "Nombre" && textBoxListar.TextLength > 0)
+            {
+                where = "where A.Nombre like '%" + textBoxListar.Text + "%'";
+            }
+
+            if (labelListar.Visible && labelListar.Text == "Descripcion" && textBoxListar.TextLength > 0)
+            {
+                where = "where A.Descripcion like '%" + textBoxListar.Text + "%'";
+            }
+
+            if (labelCategorias_o_Marcas.Visible && labelCategorias_o_Marcas.Text=="Marca" && comboBoxCate_Marca.SelectedIndex>=0)
+            {
+                where = "where M.Descripcion = '" + comboBoxCate_Marca.SelectedItem + "'";
+            }
+
+            if (labelCategorias_o_Marcas.Visible && labelCategorias_o_Marcas.Text == "Categoria" && comboBoxCate_Marca.SelectedIndex >= 0)
+            {
+                where = "where C.Descripcion = '" + comboBoxCate_Marca.SelectedItem + "'";
+            }
+
+            if (labelRangoPreciolistar.Visible && textBoxPrecioMAX.TextLength>0 && textBoxPrecioMIN.TextLength > 0)
+            {
+                where = "where A.Precio between " + textBoxPrecioMIN.Text + " and "+ textBoxPrecioMAX.Text;
+            }
+        }
+
+        
     }
 }

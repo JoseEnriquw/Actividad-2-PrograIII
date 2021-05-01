@@ -91,10 +91,11 @@ namespace Presentacion
             this.tabControl.Controls.Add(this.tabpageListar);
             this.tabControl.Controls.Add(this.tabpageME);
             this.tabControl.Controls.Add(this.tabpageAgregar);
-            this.tabControl.Location = new System.Drawing.Point(4, 18);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(793, 445);
+            this.tabControl.Size = new System.Drawing.Size(800, 450);
             this.tabControl.TabIndex = 0;
             // 
             // tabpageMenu
@@ -102,13 +103,14 @@ namespace Presentacion
             this.tabpageMenu.Location = new System.Drawing.Point(4, 22);
             this.tabpageMenu.Name = "tabpageMenu";
             this.tabpageMenu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpageMenu.Size = new System.Drawing.Size(785, 419);
+            this.tabpageMenu.Size = new System.Drawing.Size(792, 424);
             this.tabpageMenu.TabIndex = 0;
             this.tabpageMenu.Text = "Interfaz ";
             this.tabpageMenu.UseVisualStyleBackColor = true;
             // 
             // tabpageListar
             // 
+            this.tabpageListar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabpageListar.Controls.Add(this.comboBoxCate_Marca);
             this.tabpageListar.Controls.Add(this.labelCategorias_o_Marcas);
             this.tabpageListar.Controls.Add(this.labelRangoPreciolistar);
@@ -121,23 +123,25 @@ namespace Presentacion
             this.tabpageListar.Location = new System.Drawing.Point(4, 22);
             this.tabpageListar.Name = "tabpageListar";
             this.tabpageListar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpageListar.Size = new System.Drawing.Size(785, 419);
+            this.tabpageListar.Size = new System.Drawing.Size(792, 424);
             this.tabpageListar.TabIndex = 1;
             this.tabpageListar.Text = "Listar";
             this.tabpageListar.UseVisualStyleBackColor = true;
             // 
             // comboBoxCate_Marca
             // 
+            this.comboBoxCate_Marca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxCate_Marca.FormattingEnabled = true;
-            this.comboBoxCate_Marca.Location = new System.Drawing.Point(598, 38);
+            this.comboBoxCate_Marca.Location = new System.Drawing.Point(624, 38);
             this.comboBoxCate_Marca.Name = "comboBoxCate_Marca";
             this.comboBoxCate_Marca.Size = new System.Drawing.Size(121, 21);
             this.comboBoxCate_Marca.TabIndex = 7;
             // 
             // labelCategorias_o_Marcas
             // 
+            this.labelCategorias_o_Marcas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCategorias_o_Marcas.AutoSize = true;
-            this.labelCategorias_o_Marcas.Location = new System.Drawing.Point(595, 22);
+            this.labelCategorias_o_Marcas.Location = new System.Drawing.Point(621, 17);
             this.labelCategorias_o_Marcas.Name = "labelCategorias_o_Marcas";
             this.labelCategorias_o_Marcas.Size = new System.Drawing.Size(0, 13);
             this.labelCategorias_o_Marcas.TabIndex = 6;
@@ -145,6 +149,9 @@ namespace Presentacion
             // 
             // labelRangoPreciolistar
             // 
+            this.labelRangoPreciolistar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRangoPreciolistar.AutoSize = true;
             this.labelRangoPreciolistar.Location = new System.Drawing.Point(342, 17);
             this.labelRangoPreciolistar.Name = "labelRangoPreciolistar";
@@ -155,6 +162,9 @@ namespace Presentacion
             // 
             // textBoxPrecioMAX
             // 
+            this.textBoxPrecioMAX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPrecioMAX.Location = new System.Drawing.Point(445, 38);
             this.textBoxPrecioMAX.Name = "textBoxPrecioMAX";
             this.textBoxPrecioMAX.Size = new System.Drawing.Size(56, 20);
@@ -163,6 +173,9 @@ namespace Presentacion
             // 
             // textBoxPrecioMIN
             // 
+            this.textBoxPrecioMIN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPrecioMIN.Location = new System.Drawing.Point(345, 38);
             this.textBoxPrecioMIN.Name = "textBoxPrecioMIN";
             this.textBoxPrecioMIN.Size = new System.Drawing.Size(56, 20);
@@ -171,6 +184,9 @@ namespace Presentacion
             // 
             // textBoxListar
             // 
+            this.textBoxListar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxListar.Location = new System.Drawing.Point(53, 38);
             this.textBoxListar.Name = "textBoxListar";
             this.textBoxListar.Size = new System.Drawing.Size(264, 20);
@@ -179,6 +195,9 @@ namespace Presentacion
             // 
             // labelListar
             // 
+            this.labelListar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelListar.AutoSize = true;
             this.labelListar.Location = new System.Drawing.Point(103, 17);
             this.labelListar.Name = "labelListar";
@@ -188,6 +207,7 @@ namespace Presentacion
             // 
             // buttonBuscar
             // 
+            this.buttonBuscar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonBuscar.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.Color.DarkViolet;
             this.buttonBuscar.Location = new System.Drawing.Point(229, 360);
@@ -200,6 +220,9 @@ namespace Presentacion
             // 
             // dataGridViewListar
             // 
+            this.dataGridViewListar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListar.Location = new System.Drawing.Point(17, 64);
             this.dataGridViewListar.Name = "dataGridViewListar";
@@ -211,7 +234,7 @@ namespace Presentacion
             this.tabpageME.Location = new System.Drawing.Point(4, 22);
             this.tabpageME.Name = "tabpageME";
             this.tabpageME.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpageME.Size = new System.Drawing.Size(785, 419);
+            this.tabpageME.Size = new System.Drawing.Size(792, 424);
             this.tabpageME.TabIndex = 2;
             this.tabpageME.Text = "Modificar o Eliminar";
             this.tabpageME.UseVisualStyleBackColor = true;
@@ -239,7 +262,7 @@ namespace Presentacion
             this.tabpageAgregar.Controls.Add(this.pictureBoxAdd);
             this.tabpageAgregar.Location = new System.Drawing.Point(4, 22);
             this.tabpageAgregar.Name = "tabpageAgregar";
-            this.tabpageAgregar.Size = new System.Drawing.Size(785, 419);
+            this.tabpageAgregar.Size = new System.Drawing.Size(792, 424);
             this.tabpageAgregar.TabIndex = 3;
             this.tabpageAgregar.Text = "Agregar";
             this.tabpageAgregar.UseVisualStyleBackColor = true;
@@ -447,54 +470,58 @@ namespace Presentacion
             // todoToolStripMenuItem
             // 
             this.todoToolStripMenuItem.Name = "todoToolStripMenuItem";
-            this.todoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.todoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.todoToolStripMenuItem.Text = "Todo";
             this.todoToolStripMenuItem.Click += new System.EventHandler(this.todoToolStripMenuItem_Click);
             // 
             // IDToolStripMenuItem
             // 
             this.IDToolStripMenuItem.Name = "IDToolStripMenuItem";
-            this.IDToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.IDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.IDToolStripMenuItem.Text = "ID";
             this.IDToolStripMenuItem.Click += new System.EventHandler(this.iDToolStripMenuItem_Click);
             // 
             // codigoToolStripMenuItem
             // 
             this.codigoToolStripMenuItem.Name = "codigoToolStripMenuItem";
-            this.codigoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.codigoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.codigoToolStripMenuItem.Text = "Codigo";
             this.codigoToolStripMenuItem.Click += new System.EventHandler(this.codigoDeArticuloToolStripMenuItem_Click);
             // 
             // nombreDeArticulToolStripMenuItem
             // 
             this.nombreDeArticulToolStripMenuItem.Name = "nombreDeArticulToolStripMenuItem";
-            this.nombreDeArticulToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.nombreDeArticulToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nombreDeArticulToolStripMenuItem.Text = "Nombre";
             this.nombreDeArticulToolStripMenuItem.Click += new System.EventHandler(this.nombreDeArticulToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
+            this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // descripcionToolStripMenuItem
             // 
             this.descripcionToolStripMenuItem.Name = "descripcionToolStripMenuItem";
-            this.descripcionToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.descripcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.descripcionToolStripMenuItem.Text = "Descripcion";
+            this.descripcionToolStripMenuItem.Click += new System.EventHandler(this.descripcionToolStripMenuItem_Click);
             // 
             // rangoDePrecioToolStripMenuItem
             // 
             this.rangoDePrecioToolStripMenuItem.Name = "rangoDePrecioToolStripMenuItem";
-            this.rangoDePrecioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.rangoDePrecioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rangoDePrecioToolStripMenuItem.Text = "Rango de Precio";
+            this.rangoDePrecioToolStripMenuItem.Click += new System.EventHandler(this.rangoDePrecioToolStripMenuItem_Click);
             // 
             // actualizarToolStripMenuItem
             // 
