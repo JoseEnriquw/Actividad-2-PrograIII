@@ -14,8 +14,6 @@ namespace Presentacion
 {
     public partial class Login : Form
     {
-
-
         //Falta obtener estos datos: por ahora estan vacios
 
         TextWriter archivoBD = new StreamWriter("Connection_Database.txt");
@@ -28,10 +26,8 @@ namespace Presentacion
         
         public Login()
         {
-            
             InitializeComponent();
             close = logueado = false;
-            
 
         }
 
@@ -64,8 +60,9 @@ namespace Presentacion
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             //Falta guardar el server y el data base:
+            /*
             string datasource = "";
-            string initialcatalog = "";
+            string initialcatalog = "";*/
             if (radioButtonUser.Checked == true)
             {
                 if (textBoxUser.Text == nameAdmin && textBoxPass.Text == passAdmin || textBoxUser.Text == nameUser && textBoxPass.Text == passUser)
@@ -92,9 +89,9 @@ namespace Presentacion
             {
                 if (textBoxUser.Text == nameAdmin && textBoxPass.Text == passAdmin && textBoxServer.Text != "" && textBoxDataBase.Text != "")
                 {
-
+                    /*
                     datasource = textBoxServer.Text;
-                    initialcatalog = textBoxDataBase.Text;
+                    initialcatalog = textBoxDataBase.Text;*/
 
                     archivoBD.WriteLine("data source = " + textBoxServer.Text + "; initial catalog = " + textBoxDataBase.Text + "; integrated security = true; ");
                     archivoBD.Close();

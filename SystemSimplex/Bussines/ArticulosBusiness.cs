@@ -13,7 +13,9 @@ namespace Bussines
         {
             List<Articulo> lista= new List<Articulo>();
             //"data source=DESKTOP-Q2KI0EM\\SQLEXPRESS;initial catalog=CATALOGO_DB;integrated security=true;"
-            AccessData accessdata = new AccessData("DESKTOP-Q2KI0EM\\SQLEXPRESS", "CATALOGO_DB") ;
+            AccessData accessdata = new AccessData("DESKTOP-C14H989\\SQLEXPRESS", "CATALOGO_DB") ;
+            //DESKTOP-Q2KI0EM\\SQLEXPRESS (Enrique)
+            //DESKTOP-C14H989\\SQLEXPRESS (Adriel)
             try
             {
                 
@@ -50,9 +52,5 @@ namespace Bussines
                 accessdata.cerrarConexion();
             }
         }
-
-
-
-
     }
 }

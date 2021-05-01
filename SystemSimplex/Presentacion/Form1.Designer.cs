@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(systemSimplex));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabpageMenu = new System.Windows.Forms.TabPage();
             this.tabpageListar = new System.Windows.Forms.TabPage();
@@ -42,6 +43,29 @@ namespace Presentacion
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.dataGridViewListar = new System.Windows.Forms.DataGridView();
             this.tabpageME = new System.Windows.Forms.TabPage();
+            this.labelUrlMod = new System.Windows.Forms.Label();
+            this.labelPrecioMax = new System.Windows.Forms.Label();
+            this.labelPrecioMin = new System.Windows.Forms.Label();
+            this.labelPrecioMod = new System.Windows.Forms.Label();
+            this.labelDescripcionMod = new System.Windows.Forms.Label();
+            this.labelCategMod = new System.Windows.Forms.Label();
+            this.labelMarcaMod = new System.Windows.Forms.Label();
+            this.labelNombreMod = new System.Windows.Forms.Label();
+            this.labelCodMod = new System.Windows.Forms.Label();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.buttonMod = new System.Windows.Forms.Button();
+            this.dataGridMod = new System.Windows.Forms.DataGridView();
+            this.comboBoxCategMod = new System.Windows.Forms.ComboBox();
+            this.comboBoxMarcaMod = new System.Windows.Forms.ComboBox();
+            this.textBoxPrecioMaxMod = new System.Windows.Forms.TextBox();
+            this.textBoxUrlMod = new System.Windows.Forms.TextBox();
+            this.textBoxPrecioMinMod = new System.Windows.Forms.TextBox();
+            this.textBoxPrecioMod = new System.Windows.Forms.TextBox();
+            this.textBoxDescripMod = new System.Windows.Forms.TextBox();
+            this.textBoxNombreMod = new System.Windows.Forms.TextBox();
+            this.textBoxCodMod = new System.Windows.Forms.TextBox();
+            this.textBoxIdMod = new System.Windows.Forms.TextBox();
+            this.labelIdMod = new System.Windows.Forms.Label();
             this.tabpageAgregar = new System.Windows.Forms.TabPage();
             this.textBoxUrlAdd = new System.Windows.Forms.TextBox();
             this.labelUrlAdd = new System.Windows.Forms.Label();
@@ -57,7 +81,7 @@ namespace Presentacion
             this.textBoxIdAdd = new System.Windows.Forms.TextBox();
             this.labelCategoriaAdd = new System.Windows.Forms.Label();
             this.labelMarcaAdd = new System.Windows.Forms.Label();
-            this.comboBoxCategoriaAdd = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategAdd = new System.Windows.Forms.ComboBox();
             this.comboBoxMarcaAdd = new System.Windows.Forms.ComboBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.labelImagenAdd = new System.Windows.Forms.Label();
@@ -75,11 +99,12 @@ namespace Presentacion
             this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl.SuspendLayout();
             this.tabpageListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListar)).BeginInit();
+            this.tabpageME.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMod)).BeginInit();
             this.tabpageAgregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdd)).BeginInit();
             this.menuStrip2.SuspendLayout();
@@ -91,25 +116,19 @@ namespace Presentacion
             this.tabControl.Controls.Add(this.tabpageListar);
             this.tabControl.Controls.Add(this.tabpageME);
             this.tabControl.Controls.Add(this.tabpageAgregar);
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(800, 450);
-            this.tabControl.TabIndex = 0;
             // 
             // tabpageMenu
             // 
-            this.tabpageMenu.Location = new System.Drawing.Point(4, 22);
+            this.tabpageMenu.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.tabpageMenu, "tabpageMenu");
             this.tabpageMenu.Name = "tabpageMenu";
-            this.tabpageMenu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpageMenu.Size = new System.Drawing.Size(792, 424);
-            this.tabpageMenu.TabIndex = 0;
-            this.tabpageMenu.Text = "Interfaz ";
-            this.tabpageMenu.UseVisualStyleBackColor = true;
             // 
             // tabpageListar
             // 
+            resources.ApplyResources(this.tabpageListar, "tabpageListar");
             this.tabpageListar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabpageListar.Controls.Add(this.comboBoxCate_Marca);
             this.tabpageListar.Controls.Add(this.labelCategorias_o_Marcas);
@@ -120,127 +139,255 @@ namespace Presentacion
             this.tabpageListar.Controls.Add(this.labelListar);
             this.tabpageListar.Controls.Add(this.buttonBuscar);
             this.tabpageListar.Controls.Add(this.dataGridViewListar);
-            this.tabpageListar.Location = new System.Drawing.Point(4, 22);
             this.tabpageListar.Name = "tabpageListar";
-            this.tabpageListar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpageListar.Size = new System.Drawing.Size(792, 424);
-            this.tabpageListar.TabIndex = 1;
-            this.tabpageListar.Text = "Listar";
             this.tabpageListar.UseVisualStyleBackColor = true;
             // 
             // comboBoxCate_Marca
             // 
-            this.comboBoxCate_Marca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.comboBoxCate_Marca, "comboBoxCate_Marca");
             this.comboBoxCate_Marca.FormattingEnabled = true;
-            this.comboBoxCate_Marca.Location = new System.Drawing.Point(624, 38);
             this.comboBoxCate_Marca.Name = "comboBoxCate_Marca";
-            this.comboBoxCate_Marca.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxCate_Marca.TabIndex = 7;
             // 
             // labelCategorias_o_Marcas
             // 
-            this.labelCategorias_o_Marcas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelCategorias_o_Marcas.AutoSize = true;
-            this.labelCategorias_o_Marcas.Location = new System.Drawing.Point(621, 17);
+            resources.ApplyResources(this.labelCategorias_o_Marcas, "labelCategorias_o_Marcas");
             this.labelCategorias_o_Marcas.Name = "labelCategorias_o_Marcas";
-            this.labelCategorias_o_Marcas.Size = new System.Drawing.Size(0, 13);
-            this.labelCategorias_o_Marcas.TabIndex = 6;
-            this.labelCategorias_o_Marcas.Visible = false;
             // 
             // labelRangoPreciolistar
             // 
-            this.labelRangoPreciolistar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRangoPreciolistar.AutoSize = true;
-            this.labelRangoPreciolistar.Location = new System.Drawing.Point(342, 17);
+            resources.ApplyResources(this.labelRangoPreciolistar, "labelRangoPreciolistar");
+            this.labelRangoPreciolistar.BackColor = System.Drawing.Color.Black;
+            this.labelRangoPreciolistar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelRangoPreciolistar.Name = "labelRangoPreciolistar";
-            this.labelRangoPreciolistar.Size = new System.Drawing.Size(172, 13);
-            this.labelRangoPreciolistar.TabIndex = 3;
-            this.labelRangoPreciolistar.Text = "Precio Mínimo y Máximo del  rango";
-            this.labelRangoPreciolistar.Visible = false;
             // 
             // textBoxPrecioMAX
             // 
-            this.textBoxPrecioMAX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPrecioMAX.Location = new System.Drawing.Point(445, 38);
+            resources.ApplyResources(this.textBoxPrecioMAX, "textBoxPrecioMAX");
             this.textBoxPrecioMAX.Name = "textBoxPrecioMAX";
-            this.textBoxPrecioMAX.Size = new System.Drawing.Size(56, 20);
-            this.textBoxPrecioMAX.TabIndex = 5;
-            this.textBoxPrecioMAX.Visible = false;
             // 
             // textBoxPrecioMIN
             // 
-            this.textBoxPrecioMIN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPrecioMIN.Location = new System.Drawing.Point(345, 38);
+            resources.ApplyResources(this.textBoxPrecioMIN, "textBoxPrecioMIN");
             this.textBoxPrecioMIN.Name = "textBoxPrecioMIN";
-            this.textBoxPrecioMIN.Size = new System.Drawing.Size(56, 20);
-            this.textBoxPrecioMIN.TabIndex = 4;
-            this.textBoxPrecioMIN.Visible = false;
             // 
             // textBoxListar
             // 
-            this.textBoxListar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxListar.Location = new System.Drawing.Point(53, 38);
+            resources.ApplyResources(this.textBoxListar, "textBoxListar");
             this.textBoxListar.Name = "textBoxListar";
-            this.textBoxListar.Size = new System.Drawing.Size(264, 20);
-            this.textBoxListar.TabIndex = 3;
-            this.textBoxListar.Visible = false;
             // 
             // labelListar
             // 
-            this.labelListar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelListar.AutoSize = true;
-            this.labelListar.Location = new System.Drawing.Point(103, 17);
+            resources.ApplyResources(this.labelListar, "labelListar");
             this.labelListar.Name = "labelListar";
-            this.labelListar.Size = new System.Drawing.Size(0, 13);
-            this.labelListar.TabIndex = 2;
-            this.labelListar.Visible = false;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonBuscar.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.ForeColor = System.Drawing.Color.DarkViolet;
-            this.buttonBuscar.Location = new System.Drawing.Point(229, 360);
+            resources.ApplyResources(this.buttonBuscar, "buttonBuscar");
+            this.buttonBuscar.BackColor = System.Drawing.Color.DimGray;
+            this.buttonBuscar.ForeColor = System.Drawing.Color.White;
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(305, 38);
-            this.buttonBuscar.TabIndex = 1;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            this.buttonBuscar.MouseLeave += new System.EventHandler(this.buttonBuscar_MouseLeave);
+            this.buttonBuscar.MouseHover += new System.EventHandler(this.buttonBuscar_MouseHover);
             // 
             // dataGridViewListar
             // 
-            this.dataGridViewListar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.dataGridViewListar, "dataGridViewListar");
             this.dataGridViewListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListar.Location = new System.Drawing.Point(17, 64);
             this.dataGridViewListar.Name = "dataGridViewListar";
-            this.dataGridViewListar.Size = new System.Drawing.Size(728, 290);
-            this.dataGridViewListar.TabIndex = 0;
             // 
             // tabpageME
             // 
-            this.tabpageME.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tabpageME, "tabpageME");
+            this.tabpageME.Controls.Add(this.labelUrlMod);
+            this.tabpageME.Controls.Add(this.labelPrecioMax);
+            this.tabpageME.Controls.Add(this.labelPrecioMin);
+            this.tabpageME.Controls.Add(this.labelPrecioMod);
+            this.tabpageME.Controls.Add(this.labelDescripcionMod);
+            this.tabpageME.Controls.Add(this.labelCategMod);
+            this.tabpageME.Controls.Add(this.labelMarcaMod);
+            this.tabpageME.Controls.Add(this.labelNombreMod);
+            this.tabpageME.Controls.Add(this.labelCodMod);
+            this.tabpageME.Controls.Add(this.buttonDel);
+            this.tabpageME.Controls.Add(this.buttonMod);
+            this.tabpageME.Controls.Add(this.dataGridMod);
+            this.tabpageME.Controls.Add(this.comboBoxCategMod);
+            this.tabpageME.Controls.Add(this.comboBoxMarcaMod);
+            this.tabpageME.Controls.Add(this.textBoxPrecioMaxMod);
+            this.tabpageME.Controls.Add(this.textBoxUrlMod);
+            this.tabpageME.Controls.Add(this.textBoxPrecioMinMod);
+            this.tabpageME.Controls.Add(this.textBoxPrecioMod);
+            this.tabpageME.Controls.Add(this.textBoxDescripMod);
+            this.tabpageME.Controls.Add(this.textBoxNombreMod);
+            this.tabpageME.Controls.Add(this.textBoxCodMod);
+            this.tabpageME.Controls.Add(this.textBoxIdMod);
+            this.tabpageME.Controls.Add(this.labelIdMod);
             this.tabpageME.Name = "tabpageME";
-            this.tabpageME.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpageME.Size = new System.Drawing.Size(792, 424);
-            this.tabpageME.TabIndex = 2;
-            this.tabpageME.Text = "Modificar o Eliminar";
             this.tabpageME.UseVisualStyleBackColor = true;
+            // 
+            // labelUrlMod
+            // 
+            resources.ApplyResources(this.labelUrlMod, "labelUrlMod");
+            this.labelUrlMod.BackColor = System.Drawing.Color.Black;
+            this.labelUrlMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelUrlMod.Name = "labelUrlMod";
+            // 
+            // labelPrecioMax
+            // 
+            resources.ApplyResources(this.labelPrecioMax, "labelPrecioMax");
+            this.labelPrecioMax.BackColor = System.Drawing.Color.Black;
+            this.labelPrecioMax.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelPrecioMax.Name = "labelPrecioMax";
+            // 
+            // labelPrecioMin
+            // 
+            resources.ApplyResources(this.labelPrecioMin, "labelPrecioMin");
+            this.labelPrecioMin.BackColor = System.Drawing.Color.Black;
+            this.labelPrecioMin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelPrecioMin.Name = "labelPrecioMin";
+            // 
+            // labelPrecioMod
+            // 
+            resources.ApplyResources(this.labelPrecioMod, "labelPrecioMod");
+            this.labelPrecioMod.BackColor = System.Drawing.Color.Black;
+            this.labelPrecioMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelPrecioMod.Name = "labelPrecioMod";
+            // 
+            // labelDescripcionMod
+            // 
+            resources.ApplyResources(this.labelDescripcionMod, "labelDescripcionMod");
+            this.labelDescripcionMod.BackColor = System.Drawing.Color.Black;
+            this.labelDescripcionMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelDescripcionMod.Name = "labelDescripcionMod";
+            // 
+            // labelCategMod
+            // 
+            resources.ApplyResources(this.labelCategMod, "labelCategMod");
+            this.labelCategMod.BackColor = System.Drawing.Color.Black;
+            this.labelCategMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelCategMod.Name = "labelCategMod";
+            // 
+            // labelMarcaMod
+            // 
+            resources.ApplyResources(this.labelMarcaMod, "labelMarcaMod");
+            this.labelMarcaMod.BackColor = System.Drawing.Color.Black;
+            this.labelMarcaMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelMarcaMod.Name = "labelMarcaMod";
+            // 
+            // labelNombreMod
+            // 
+            resources.ApplyResources(this.labelNombreMod, "labelNombreMod");
+            this.labelNombreMod.BackColor = System.Drawing.Color.Black;
+            this.labelNombreMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelNombreMod.Name = "labelNombreMod";
+            // 
+            // labelCodMod
+            // 
+            resources.ApplyResources(this.labelCodMod, "labelCodMod");
+            this.labelCodMod.BackColor = System.Drawing.Color.Black;
+            this.labelCodMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelCodMod.Name = "labelCodMod";
+            // 
+            // buttonDel
+            // 
+            resources.ApplyResources(this.buttonDel, "buttonDel");
+            this.buttonDel.BackColor = System.Drawing.Color.DimGray;
+            this.buttonDel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.UseVisualStyleBackColor = false;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            this.buttonDel.MouseLeave += new System.EventHandler(this.buttonDel_MouseLeave);
+            this.buttonDel.MouseHover += new System.EventHandler(this.buttonDel_MouseHover);
+            // 
+            // buttonMod
+            // 
+            resources.ApplyResources(this.buttonMod, "buttonMod");
+            this.buttonMod.BackColor = System.Drawing.Color.DimGray;
+            this.buttonMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonMod.Name = "buttonMod";
+            this.buttonMod.UseVisualStyleBackColor = false;
+            this.buttonMod.Click += new System.EventHandler(this.buttonMod_Click);
+            this.buttonMod.MouseLeave += new System.EventHandler(this.buttonMod_MouseLeave);
+            this.buttonMod.MouseHover += new System.EventHandler(this.buttonMod_MouseHover);
+            // 
+            // dataGridMod
+            // 
+            resources.ApplyResources(this.dataGridMod, "dataGridMod");
+            this.dataGridMod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMod.Name = "dataGridMod";
+            // 
+            // comboBoxCategMod
+            // 
+            this.comboBoxCategMod.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxCategMod, "comboBoxCategMod");
+            this.comboBoxCategMod.Name = "comboBoxCategMod";
+            this.comboBoxCategMod.SelectedIndexChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // comboBoxMarcaMod
+            // 
+            this.comboBoxMarcaMod.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxMarcaMod, "comboBoxMarcaMod");
+            this.comboBoxMarcaMod.Name = "comboBoxMarcaMod";
+            this.comboBoxMarcaMod.SelectedIndexChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // textBoxPrecioMaxMod
+            // 
+            resources.ApplyResources(this.textBoxPrecioMaxMod, "textBoxPrecioMaxMod");
+            this.textBoxPrecioMaxMod.Name = "textBoxPrecioMaxMod";
+            this.textBoxPrecioMaxMod.TextChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // textBoxUrlMod
+            // 
+            resources.ApplyResources(this.textBoxUrlMod, "textBoxUrlMod");
+            this.textBoxUrlMod.Name = "textBoxUrlMod";
+            // 
+            // textBoxPrecioMinMod
+            // 
+            resources.ApplyResources(this.textBoxPrecioMinMod, "textBoxPrecioMinMod");
+            this.textBoxPrecioMinMod.Name = "textBoxPrecioMinMod";
+            this.textBoxPrecioMinMod.TextChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // textBoxPrecioMod
+            // 
+            resources.ApplyResources(this.textBoxPrecioMod, "textBoxPrecioMod");
+            this.textBoxPrecioMod.Name = "textBoxPrecioMod";
+            this.textBoxPrecioMod.TextChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // textBoxDescripMod
+            // 
+            resources.ApplyResources(this.textBoxDescripMod, "textBoxDescripMod");
+            this.textBoxDescripMod.Name = "textBoxDescripMod";
+            this.textBoxDescripMod.TextChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // textBoxNombreMod
+            // 
+            resources.ApplyResources(this.textBoxNombreMod, "textBoxNombreMod");
+            this.textBoxNombreMod.Name = "textBoxNombreMod";
+            this.textBoxNombreMod.TextChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // textBoxCodMod
+            // 
+            resources.ApplyResources(this.textBoxCodMod, "textBoxCodMod");
+            this.textBoxCodMod.Name = "textBoxCodMod";
+            this.textBoxCodMod.TextChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // textBoxIdMod
+            // 
+            resources.ApplyResources(this.textBoxIdMod, "textBoxIdMod");
+            this.textBoxIdMod.Name = "textBoxIdMod";
+            this.textBoxIdMod.TextChanged += new System.EventHandler(this.cambioMod);
+            // 
+            // labelIdMod
+            // 
+            resources.ApplyResources(this.labelIdMod, "labelIdMod");
+            this.labelIdMod.BackColor = System.Drawing.Color.Black;
+            this.labelIdMod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelIdMod.Name = "labelIdMod";
             // 
             // tabpageAgregar
             // 
+            resources.ApplyResources(this.tabpageAgregar, "tabpageAgregar");
             this.tabpageAgregar.Controls.Add(this.textBoxUrlAdd);
             this.tabpageAgregar.Controls.Add(this.labelUrlAdd);
             this.tabpageAgregar.Controls.Add(this.textBoxDescripAdd);
@@ -255,202 +402,155 @@ namespace Presentacion
             this.tabpageAgregar.Controls.Add(this.textBoxIdAdd);
             this.tabpageAgregar.Controls.Add(this.labelCategoriaAdd);
             this.tabpageAgregar.Controls.Add(this.labelMarcaAdd);
-            this.tabpageAgregar.Controls.Add(this.comboBoxCategoriaAdd);
+            this.tabpageAgregar.Controls.Add(this.comboBoxCategAdd);
             this.tabpageAgregar.Controls.Add(this.comboBoxMarcaAdd);
             this.tabpageAgregar.Controls.Add(this.buttonAdd);
             this.tabpageAgregar.Controls.Add(this.labelImagenAdd);
             this.tabpageAgregar.Controls.Add(this.pictureBoxAdd);
-            this.tabpageAgregar.Location = new System.Drawing.Point(4, 22);
             this.tabpageAgregar.Name = "tabpageAgregar";
-            this.tabpageAgregar.Size = new System.Drawing.Size(792, 424);
-            this.tabpageAgregar.TabIndex = 3;
-            this.tabpageAgregar.Text = "Agregar";
             this.tabpageAgregar.UseVisualStyleBackColor = true;
             // 
             // textBoxUrlAdd
             // 
-            this.textBoxUrlAdd.Location = new System.Drawing.Point(14, 373);
-            this.textBoxUrlAdd.Multiline = true;
+            resources.ApplyResources(this.textBoxUrlAdd, "textBoxUrlAdd");
             this.textBoxUrlAdd.Name = "textBoxUrlAdd";
-            this.textBoxUrlAdd.Size = new System.Drawing.Size(448, 25);
-            this.textBoxUrlAdd.TabIndex = 18;
             this.textBoxUrlAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
             // labelUrlAdd
             // 
-            this.labelUrlAdd.AutoSize = true;
-            this.labelUrlAdd.Location = new System.Drawing.Point(11, 354);
+            resources.ApplyResources(this.labelUrlAdd, "labelUrlAdd");
+            this.labelUrlAdd.BackColor = System.Drawing.Color.Black;
+            this.labelUrlAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelUrlAdd.Name = "labelUrlAdd";
-            this.labelUrlAdd.Size = new System.Drawing.Size(66, 13);
-            this.labelUrlAdd.TabIndex = 17;
-            this.labelUrlAdd.Text = "URL imagen";
             // 
             // textBoxDescripAdd
             // 
-            this.textBoxDescripAdd.Location = new System.Drawing.Point(14, 157);
-            this.textBoxDescripAdd.Multiline = true;
+            resources.ApplyResources(this.textBoxDescripAdd, "textBoxDescripAdd");
             this.textBoxDescripAdd.Name = "textBoxDescripAdd";
-            this.textBoxDescripAdd.Size = new System.Drawing.Size(448, 194);
-            this.textBoxDescripAdd.TabIndex = 16;
             this.textBoxDescripAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
             // labelDescripAdd
             // 
-            this.labelDescripAdd.AutoSize = true;
-            this.labelDescripAdd.Location = new System.Drawing.Point(11, 141);
+            resources.ApplyResources(this.labelDescripAdd, "labelDescripAdd");
+            this.labelDescripAdd.BackColor = System.Drawing.Color.Black;
+            this.labelDescripAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelDescripAdd.Name = "labelDescripAdd";
-            this.labelDescripAdd.Size = new System.Drawing.Size(63, 13);
-            this.labelDescripAdd.TabIndex = 15;
-            this.labelDescripAdd.Text = "Descripcion";
             // 
             // labelPrecioAdd
             // 
-            this.labelPrecioAdd.AutoSize = true;
-            this.labelPrecioAdd.Location = new System.Drawing.Point(356, 61);
+            resources.ApplyResources(this.labelPrecioAdd, "labelPrecioAdd");
+            this.labelPrecioAdd.BackColor = System.Drawing.Color.Black;
+            this.labelPrecioAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelPrecioAdd.Name = "labelPrecioAdd";
-            this.labelPrecioAdd.Size = new System.Drawing.Size(37, 13);
-            this.labelPrecioAdd.TabIndex = 14;
-            this.labelPrecioAdd.Text = "Precio";
             // 
             // labelNombreAdd
             // 
-            this.labelNombreAdd.AutoSize = true;
-            this.labelNombreAdd.Location = new System.Drawing.Point(235, 61);
+            resources.ApplyResources(this.labelNombreAdd, "labelNombreAdd");
+            this.labelNombreAdd.BackColor = System.Drawing.Color.Black;
+            this.labelNombreAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelNombreAdd.Name = "labelNombreAdd";
-            this.labelNombreAdd.Size = new System.Drawing.Size(44, 13);
-            this.labelNombreAdd.TabIndex = 13;
-            this.labelNombreAdd.Text = "Nombre";
             // 
             // labelCodigoAdd
             // 
-            this.labelCodigoAdd.AutoSize = true;
-            this.labelCodigoAdd.Location = new System.Drawing.Point(113, 61);
+            resources.ApplyResources(this.labelCodigoAdd, "labelCodigoAdd");
+            this.labelCodigoAdd.BackColor = System.Drawing.Color.Black;
+            this.labelCodigoAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelCodigoAdd.Name = "labelCodigoAdd";
-            this.labelCodigoAdd.Size = new System.Drawing.Size(40, 13);
-            this.labelCodigoAdd.TabIndex = 12;
-            this.labelCodigoAdd.Text = "Codigo";
             // 
             // labelIdAdd
             // 
-            this.labelIdAdd.AutoSize = true;
-            this.labelIdAdd.Location = new System.Drawing.Point(10, 61);
+            resources.ApplyResources(this.labelIdAdd, "labelIdAdd");
+            this.labelIdAdd.BackColor = System.Drawing.Color.Black;
+            this.labelIdAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelIdAdd.Name = "labelIdAdd";
-            this.labelIdAdd.Size = new System.Drawing.Size(90, 13);
-            this.labelIdAdd.TabIndex = 11;
-            this.labelIdAdd.Text = "Id (Autonumerico)";
             // 
             // textBoxPrecioAdd
             // 
-            this.textBoxPrecioAdd.Location = new System.Drawing.Point(359, 77);
+            resources.ApplyResources(this.textBoxPrecioAdd, "textBoxPrecioAdd");
             this.textBoxPrecioAdd.Name = "textBoxPrecioAdd";
-            this.textBoxPrecioAdd.Size = new System.Drawing.Size(102, 20);
-            this.textBoxPrecioAdd.TabIndex = 10;
             this.textBoxPrecioAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
             // textBoxNombreAdd
             // 
-            this.textBoxNombreAdd.Location = new System.Drawing.Point(238, 77);
+            resources.ApplyResources(this.textBoxNombreAdd, "textBoxNombreAdd");
             this.textBoxNombreAdd.Name = "textBoxNombreAdd";
-            this.textBoxNombreAdd.Size = new System.Drawing.Size(115, 20);
-            this.textBoxNombreAdd.TabIndex = 9;
             this.textBoxNombreAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
             // textBoxCodAdd
             // 
-            this.textBoxCodAdd.Location = new System.Drawing.Point(116, 77);
+            resources.ApplyResources(this.textBoxCodAdd, "textBoxCodAdd");
             this.textBoxCodAdd.Name = "textBoxCodAdd";
-            this.textBoxCodAdd.Size = new System.Drawing.Size(116, 20);
-            this.textBoxCodAdd.TabIndex = 8;
             this.textBoxCodAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
             // 
             // textBoxIdAdd
             // 
-            this.textBoxIdAdd.Enabled = false;
-            this.textBoxIdAdd.Location = new System.Drawing.Point(13, 77);
+            resources.ApplyResources(this.textBoxIdAdd, "textBoxIdAdd");
             this.textBoxIdAdd.Name = "textBoxIdAdd";
-            this.textBoxIdAdd.Size = new System.Drawing.Size(97, 20);
-            this.textBoxIdAdd.TabIndex = 7;
             // 
             // labelCategoriaAdd
             // 
-            this.labelCategoriaAdd.AutoSize = true;
-            this.labelCategoriaAdd.Location = new System.Drawing.Point(235, 101);
+            resources.ApplyResources(this.labelCategoriaAdd, "labelCategoriaAdd");
+            this.labelCategoriaAdd.BackColor = System.Drawing.Color.Black;
+            this.labelCategoriaAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelCategoriaAdd.Name = "labelCategoriaAdd";
-            this.labelCategoriaAdd.Size = new System.Drawing.Size(52, 13);
-            this.labelCategoriaAdd.TabIndex = 6;
-            this.labelCategoriaAdd.Text = "Categoria";
             // 
             // labelMarcaAdd
             // 
-            this.labelMarcaAdd.AutoSize = true;
-            this.labelMarcaAdd.Location = new System.Drawing.Point(10, 101);
+            resources.ApplyResources(this.labelMarcaAdd, "labelMarcaAdd");
+            this.labelMarcaAdd.BackColor = System.Drawing.Color.Black;
+            this.labelMarcaAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelMarcaAdd.Name = "labelMarcaAdd";
-            this.labelMarcaAdd.Size = new System.Drawing.Size(37, 13);
-            this.labelMarcaAdd.TabIndex = 5;
-            this.labelMarcaAdd.Text = "Marca";
             // 
-            // comboBoxCategoriaAdd
+            // comboBoxCategAdd
             // 
-            this.comboBoxCategoriaAdd.FormattingEnabled = true;
-            this.comboBoxCategoriaAdd.Location = new System.Drawing.Point(238, 117);
-            this.comboBoxCategoriaAdd.Name = "comboBoxCategoriaAdd";
-            this.comboBoxCategoriaAdd.Size = new System.Drawing.Size(223, 21);
-            this.comboBoxCategoriaAdd.TabIndex = 4;
-            this.comboBoxCategoriaAdd.SelectedIndexChanged += new System.EventHandler(this.changedAddVerific);
+            resources.ApplyResources(this.comboBoxCategAdd, "comboBoxCategAdd");
+            this.comboBoxCategAdd.FormattingEnabled = true;
+            this.comboBoxCategAdd.Name = "comboBoxCategAdd";
+            this.comboBoxCategAdd.SelectedIndexChanged += new System.EventHandler(this.changedAddVerific);
             // 
             // comboBoxMarcaAdd
             // 
+            resources.ApplyResources(this.comboBoxMarcaAdd, "comboBoxMarcaAdd");
             this.comboBoxMarcaAdd.FormattingEnabled = true;
-            this.comboBoxMarcaAdd.Location = new System.Drawing.Point(13, 117);
             this.comboBoxMarcaAdd.Name = "comboBoxMarcaAdd";
-            this.comboBoxMarcaAdd.Size = new System.Drawing.Size(219, 21);
-            this.comboBoxMarcaAdd.TabIndex = 3;
             this.comboBoxMarcaAdd.SelectedIndexChanged += new System.EventHandler(this.changedAddVerific);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Enabled = false;
-            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(467, 373);
+            resources.ApplyResources(this.buttonAdd, "buttonAdd");
+            this.buttonAdd.BackColor = System.Drawing.Color.DimGray;
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(299, 25);
-            this.buttonAdd.TabIndex = 2;
-            this.buttonAdd.Text = "AGREGAR";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.UseWaitCursor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.buttonAdd.MouseLeave += new System.EventHandler(this.buttonAdd_MouseLeave);
+            this.buttonAdd.MouseHover += new System.EventHandler(this.buttonAdd_MouseHover);
             // 
             // labelImagenAdd
             // 
-            this.labelImagenAdd.AutoSize = true;
-            this.labelImagenAdd.Location = new System.Drawing.Point(464, 61);
+            resources.ApplyResources(this.labelImagenAdd, "labelImagenAdd");
+            this.labelImagenAdd.BackColor = System.Drawing.Color.Black;
+            this.labelImagenAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelImagenAdd.Name = "labelImagenAdd";
-            this.labelImagenAdd.Size = new System.Drawing.Size(104, 13);
-            this.labelImagenAdd.TabIndex = 1;
-            this.labelImagenAdd.Text = "Imagen del producto";
             // 
             // pictureBoxAdd
             // 
+            resources.ApplyResources(this.pictureBoxAdd, "pictureBoxAdd");
             this.pictureBoxAdd.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxAdd.Location = new System.Drawing.Point(467, 77);
             this.pictureBoxAdd.Name = "pictureBoxAdd";
-            this.pictureBoxAdd.Size = new System.Drawing.Size(299, 290);
-            this.pictureBoxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxAdd.TabIndex = 0;
             this.pictureBoxAdd.TabStop = false;
             // 
             // menuStrip2
             // 
+            this.menuStrip2.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.menuStrip2, "menuStrip2");
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listarArticuloPorToolStripMenuItem,
             this.actualizarToolStripMenuItem,
             this.configuracionToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip2.TabIndex = 2;
-            this.menuStrip2.Text = "menuStrip2";
             // 
             // listarArticuloPorToolStripMenuItem
             // 
@@ -464,114 +564,100 @@ namespace Presentacion
             this.descripcionToolStripMenuItem,
             this.rangoDePrecioToolStripMenuItem});
             this.listarArticuloPorToolStripMenuItem.Name = "listarArticuloPorToolStripMenuItem";
-            this.listarArticuloPorToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
-            this.listarArticuloPorToolStripMenuItem.Text = "Listar Articulo Por";
+            resources.ApplyResources(this.listarArticuloPorToolStripMenuItem, "listarArticuloPorToolStripMenuItem");
             // 
             // todoToolStripMenuItem
             // 
             this.todoToolStripMenuItem.Name = "todoToolStripMenuItem";
-            this.todoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.todoToolStripMenuItem.Text = "Todo";
+            resources.ApplyResources(this.todoToolStripMenuItem, "todoToolStripMenuItem");
             this.todoToolStripMenuItem.Click += new System.EventHandler(this.todoToolStripMenuItem_Click);
             // 
             // IDToolStripMenuItem
             // 
             this.IDToolStripMenuItem.Name = "IDToolStripMenuItem";
-            this.IDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.IDToolStripMenuItem.Text = "ID";
+            resources.ApplyResources(this.IDToolStripMenuItem, "IDToolStripMenuItem");
             this.IDToolStripMenuItem.Click += new System.EventHandler(this.iDToolStripMenuItem_Click);
             // 
             // codigoToolStripMenuItem
             // 
             this.codigoToolStripMenuItem.Name = "codigoToolStripMenuItem";
-            this.codigoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.codigoToolStripMenuItem.Text = "Codigo";
+            resources.ApplyResources(this.codigoToolStripMenuItem, "codigoToolStripMenuItem");
             this.codigoToolStripMenuItem.Click += new System.EventHandler(this.codigoDeArticuloToolStripMenuItem_Click);
             // 
             // nombreDeArticulToolStripMenuItem
             // 
             this.nombreDeArticulToolStripMenuItem.Name = "nombreDeArticulToolStripMenuItem";
-            this.nombreDeArticulToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nombreDeArticulToolStripMenuItem.Text = "Nombre";
+            resources.ApplyResources(this.nombreDeArticulToolStripMenuItem, "nombreDeArticulToolStripMenuItem");
             this.nombreDeArticulToolStripMenuItem.Click += new System.EventHandler(this.nombreDeArticulToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.marcaToolStripMenuItem.Text = "Marca";
+            resources.ApplyResources(this.marcaToolStripMenuItem, "marcaToolStripMenuItem");
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.categoriaToolStripMenuItem.Text = "Categoria";
+            resources.ApplyResources(this.categoriaToolStripMenuItem, "categoriaToolStripMenuItem");
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // descripcionToolStripMenuItem
             // 
             this.descripcionToolStripMenuItem.Name = "descripcionToolStripMenuItem";
-            this.descripcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.descripcionToolStripMenuItem.Text = "Descripcion";
+            resources.ApplyResources(this.descripcionToolStripMenuItem, "descripcionToolStripMenuItem");
             this.descripcionToolStripMenuItem.Click += new System.EventHandler(this.descripcionToolStripMenuItem_Click);
             // 
             // rangoDePrecioToolStripMenuItem
             // 
             this.rangoDePrecioToolStripMenuItem.Name = "rangoDePrecioToolStripMenuItem";
-            this.rangoDePrecioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rangoDePrecioToolStripMenuItem.Text = "Rango de Precio";
+            resources.ApplyResources(this.rangoDePrecioToolStripMenuItem, "rangoDePrecioToolStripMenuItem");
             this.rangoDePrecioToolStripMenuItem.Click += new System.EventHandler(this.rangoDePrecioToolStripMenuItem_Click);
             // 
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
-            this.modificarToolStripMenuItem,
-            this.eliminarArticuloToolStripMenuItem});
+            this.modificarToolStripMenuItem});
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.actualizarToolStripMenuItem.Text = "Actualizar";
+            resources.ApplyResources(this.actualizarToolStripMenuItem, "actualizarToolStripMenuItem");
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.agregarToolStripMenuItem.Text = "Agregar Articulo";
+            resources.ApplyResources(this.agregarToolStripMenuItem, "agregarToolStripMenuItem");
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar Articulo";
-            // 
-            // eliminarArticuloToolStripMenuItem
-            // 
-            this.eliminarArticuloToolStripMenuItem.Name = "eliminarArticuloToolStripMenuItem";
-            this.eliminarArticuloToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.eliminarArticuloToolStripMenuItem.Text = "Eliminar Articulo";
+            resources.ApplyResources(this.modificarToolStripMenuItem, "modificarToolStripMenuItem");
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // configuracionToolStripMenuItem
             // 
             this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
-            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.configuracionToolStripMenuItem.Text = "Configuracion";
+            resources.ApplyResources(this.configuracionToolStripMenuItem, "configuracionToolStripMenuItem");
             // 
             // systemSimplex
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.tabControl);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "systemSimplex";
-            this.Text = "Form1";
+            this.TransparencyKey = System.Drawing.Color.Maroon;
             this.Load += new System.EventHandler(this.Window_Load);
             this.tabControl.ResumeLayout(false);
             this.tabpageListar.ResumeLayout(false);
             this.tabpageListar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListar)).EndInit();
+            this.tabpageME.ResumeLayout(false);
+            this.tabpageME.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMod)).EndInit();
             this.tabpageAgregar.ResumeLayout(false);
             this.tabpageAgregar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdd)).EndInit();
@@ -596,7 +682,6 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarArticuloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
         private System.Windows.Forms.Label labelRangoPreciolistar;
         private System.Windows.Forms.TextBox textBoxPrecioMAX;
@@ -627,11 +712,34 @@ namespace Presentacion
         private System.Windows.Forms.TextBox textBoxIdAdd;
         private System.Windows.Forms.Label labelCategoriaAdd;
         private System.Windows.Forms.Label labelMarcaAdd;
-        private System.Windows.Forms.ComboBox comboBoxCategoriaAdd;
+        private System.Windows.Forms.ComboBox comboBoxCategAdd;
         private System.Windows.Forms.ComboBox comboBoxMarcaAdd;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label labelImagenAdd;
         private System.Windows.Forms.PictureBox pictureBoxAdd;
+        private System.Windows.Forms.Label labelUrlMod;
+        private System.Windows.Forms.Label labelPrecioMax;
+        private System.Windows.Forms.Label labelPrecioMin;
+        private System.Windows.Forms.Label labelPrecioMod;
+        private System.Windows.Forms.Label labelDescripcionMod;
+        private System.Windows.Forms.Label labelCategMod;
+        private System.Windows.Forms.Label labelMarcaMod;
+        private System.Windows.Forms.Label labelNombreMod;
+        private System.Windows.Forms.Label labelCodMod;
+        private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.Button buttonMod;
+        private System.Windows.Forms.DataGridView dataGridMod;
+        private System.Windows.Forms.ComboBox comboBoxCategMod;
+        private System.Windows.Forms.ComboBox comboBoxMarcaMod;
+        private System.Windows.Forms.TextBox textBoxPrecioMaxMod;
+        private System.Windows.Forms.TextBox textBoxUrlMod;
+        private System.Windows.Forms.TextBox textBoxPrecioMinMod;
+        private System.Windows.Forms.TextBox textBoxPrecioMod;
+        private System.Windows.Forms.TextBox textBoxDescripMod;
+        private System.Windows.Forms.TextBox textBoxNombreMod;
+        private System.Windows.Forms.TextBox textBoxCodMod;
+        private System.Windows.Forms.TextBox textBoxIdMod;
+        private System.Windows.Forms.Label labelIdMod;
     }
 }
 
