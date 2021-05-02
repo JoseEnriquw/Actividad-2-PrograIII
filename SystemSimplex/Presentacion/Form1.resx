@@ -4654,6 +4654,30 @@
   <data name="tabpageME.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
+  <data name="labelUrlMod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelUrlMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelUrlMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>606, 133</value>
+  </data>
+  <data name="labelUrlMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelUrlMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 14</value>
+  </data>
+  <data name="labelUrlMod.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="labelUrlMod.Text" xml:space="preserve">
+    <value>URL de la imagen</value>
+  </data>
+  <data name="labelUrlMod.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;labelUrlMod.Name" xml:space="preserve">
     <value>labelUrlMod</value>
   </data>
@@ -4665,6 +4689,27 @@
   </data>
   <data name="&gt;&gt;labelUrlMod.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="labelPrecioMax.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPrecioMax.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelPrecioMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>606, 159</value>
+  </data>
+  <data name="labelPrecioMax.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelPrecioMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 14</value>
+  </data>
+  <data name="labelPrecioMax.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="labelPrecioMax.Text" xml:space="preserve">
+    <value>Precio Max</value>
   </data>
   <data name="&gt;&gt;labelPrecioMax.Name" xml:space="preserve">
     <value>labelPrecioMax</value>
@@ -4678,6 +4723,27 @@
   <data name="&gt;&gt;labelPrecioMax.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="labelPrecioMin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPrecioMin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelPrecioMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>606, 133</value>
+  </data>
+  <data name="labelPrecioMin.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelPrecioMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 14</value>
+  </data>
+  <data name="labelPrecioMin.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="labelPrecioMin.Text" xml:space="preserve">
+    <value>Precio Min</value>
+  </data>
   <data name="&gt;&gt;labelPrecioMin.Name" xml:space="preserve">
     <value>labelPrecioMin</value>
   </data>
@@ -4689,6 +4755,27 @@
   </data>
   <data name="&gt;&gt;labelPrecioMin.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="labelPrecioMod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPrecioMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelPrecioMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>606, 107</value>
+  </data>
+  <data name="labelPrecioMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelPrecioMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 14</value>
+  </data>
+  <data name="labelPrecioMod.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelPrecioMod.Text" xml:space="preserve">
+    <value>Precio Fijo</value>
   </data>
   <data name="&gt;&gt;labelPrecioMod.Name" xml:space="preserve">
     <value>labelPrecioMod</value>
@@ -4702,6 +4789,27 @@
   <data name="&gt;&gt;labelPrecioMod.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="labelDescripcionMod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDescripcionMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelDescripcionMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 81</value>
+  </data>
+  <data name="labelDescripcionMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelDescripcionMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 14</value>
+  </data>
+  <data name="labelDescripcionMod.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="labelDescripcionMod.Text" xml:space="preserve">
+    <value>Descripcion</value>
+  </data>
   <data name="&gt;&gt;labelDescripcionMod.Name" xml:space="preserve">
     <value>labelDescripcionMod</value>
   </data>
@@ -4713,6 +4821,27 @@
   </data>
   <data name="&gt;&gt;labelDescripcionMod.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="labelCategMod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCategMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelCategMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 159</value>
+  </data>
+  <data name="labelCategMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelCategMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 14</value>
+  </data>
+  <data name="labelCategMod.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="labelCategMod.Text" xml:space="preserve">
+    <value>Categoria</value>
   </data>
   <data name="&gt;&gt;labelCategMod.Name" xml:space="preserve">
     <value>labelCategMod</value>
@@ -4726,6 +4855,27 @@
   <data name="&gt;&gt;labelCategMod.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="labelMarcaMod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMarcaMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelMarcaMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 133</value>
+  </data>
+  <data name="labelMarcaMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelMarcaMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 14</value>
+  </data>
+  <data name="labelMarcaMod.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="labelMarcaMod.Text" xml:space="preserve">
+    <value>Marca</value>
+  </data>
   <data name="&gt;&gt;labelMarcaMod.Name" xml:space="preserve">
     <value>labelMarcaMod</value>
   </data>
@@ -4737,6 +4887,27 @@
   </data>
   <data name="&gt;&gt;labelMarcaMod.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="labelNombreMod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelNombreMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelNombreMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 107</value>
+  </data>
+  <data name="labelNombreMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelNombreMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 14</value>
+  </data>
+  <data name="labelNombreMod.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="labelNombreMod.Text" xml:space="preserve">
+    <value>Nombre</value>
   </data>
   <data name="&gt;&gt;labelNombreMod.Name" xml:space="preserve">
     <value>labelNombreMod</value>
@@ -4750,6 +4921,27 @@
   <data name="&gt;&gt;labelNombreMod.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="labelCodMod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCodMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelCodMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 81</value>
+  </data>
+  <data name="labelCodMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelCodMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 14</value>
+  </data>
+  <data name="labelCodMod.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labelCodMod.Text" xml:space="preserve">
+    <value>Codigo</value>
+  </data>
   <data name="&gt;&gt;labelCodMod.Name" xml:space="preserve">
     <value>labelCodMod</value>
   </data>
@@ -4761,6 +4953,24 @@
   </data>
   <data name="&gt;&gt;labelCodMod.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="buttonDel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonDel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="buttonDel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>682, 302</value>
+  </data>
+  <data name="buttonDel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 114</value>
+  </data>
+  <data name="buttonDel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonDel.Text" xml:space="preserve">
+    <value>ELIMINAR</value>
   </data>
   <data name="&gt;&gt;buttonDel.Name" xml:space="preserve">
     <value>buttonDel</value>
@@ -4774,6 +4984,24 @@
   <data name="&gt;&gt;buttonDel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="buttonMod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="buttonMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 183</value>
+  </data>
+  <data name="buttonMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 114</value>
+  </data>
+  <data name="buttonMod.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="buttonMod.Text" xml:space="preserve">
+    <value>MODIFICAR</value>
+  </data>
   <data name="&gt;&gt;buttonMod.Name" xml:space="preserve">
     <value>buttonMod</value>
   </data>
@@ -4785,6 +5013,18 @@
   </data>
   <data name="&gt;&gt;buttonMod.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="dataGridMod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="dataGridMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 183</value>
+  </data>
+  <data name="dataGridMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>664, 233</value>
+  </data>
+  <data name="dataGridMod.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;dataGridMod.Name" xml:space="preserve">
     <value>dataGridMod</value>
@@ -4798,6 +5038,15 @@
   <data name="&gt;&gt;dataGridMod.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="comboBoxCategMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 156</value>
+  </data>
+  <data name="comboBoxCategMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 21</value>
+  </data>
+  <data name="comboBoxCategMod.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
   <data name="&gt;&gt;comboBoxCategMod.Name" xml:space="preserve">
     <value>comboBoxCategMod</value>
   </data>
@@ -4809,6 +5058,15 @@
   </data>
   <data name="&gt;&gt;comboBoxCategMod.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="comboBoxMarcaMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 129</value>
+  </data>
+  <data name="comboBoxMarcaMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 21</value>
+  </data>
+  <data name="comboBoxMarcaMod.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;comboBoxMarcaMod.Name" xml:space="preserve">
     <value>comboBoxMarcaMod</value>
@@ -4822,6 +5080,15 @@
   <data name="&gt;&gt;comboBoxMarcaMod.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="textBoxPrecioMaxMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 156</value>
+  </data>
+  <data name="textBoxPrecioMaxMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 20</value>
+  </data>
+  <data name="textBoxPrecioMaxMod.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
   <data name="&gt;&gt;textBoxPrecioMaxMod.Name" xml:space="preserve">
     <value>textBoxPrecioMaxMod</value>
   </data>
@@ -4833,6 +5100,21 @@
   </data>
   <data name="&gt;&gt;textBoxPrecioMaxMod.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="textBoxUrlMod.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textBoxUrlMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>606, 156</value>
+  </data>
+  <data name="textBoxUrlMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 20</value>
+  </data>
+  <data name="textBoxUrlMod.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="textBoxUrlMod.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;textBoxUrlMod.Name" xml:space="preserve">
     <value>textBoxUrlMod</value>
@@ -4846,6 +5128,15 @@
   <data name="&gt;&gt;textBoxUrlMod.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="textBoxPrecioMinMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 130</value>
+  </data>
+  <data name="textBoxPrecioMinMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 20</value>
+  </data>
+  <data name="textBoxPrecioMinMod.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <data name="&gt;&gt;textBoxPrecioMinMod.Name" xml:space="preserve">
     <value>textBoxPrecioMinMod</value>
   </data>
@@ -4857,6 +5148,15 @@
   </data>
   <data name="&gt;&gt;textBoxPrecioMinMod.ZOrder" xml:space="preserve">
     <value>16</value>
+  </data>
+  <data name="textBoxPrecioMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 104</value>
+  </data>
+  <data name="textBoxPrecioMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 20</value>
+  </data>
+  <data name="textBoxPrecioMod.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;textBoxPrecioMod.Name" xml:space="preserve">
     <value>textBoxPrecioMod</value>
@@ -4870,6 +5170,18 @@
   <data name="&gt;&gt;textBoxPrecioMod.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <data name="textBoxDescripMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 104</value>
+  </data>
+  <data name="textBoxDescripMod.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxDescripMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 73</value>
+  </data>
+  <data name="textBoxDescripMod.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
   <data name="&gt;&gt;textBoxDescripMod.Name" xml:space="preserve">
     <value>textBoxDescripMod</value>
   </data>
@@ -4881,6 +5193,15 @@
   </data>
   <data name="&gt;&gt;textBoxDescripMod.ZOrder" xml:space="preserve">
     <value>18</value>
+  </data>
+  <data name="textBoxNombreMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 104</value>
+  </data>
+  <data name="textBoxNombreMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 20</value>
+  </data>
+  <data name="textBoxNombreMod.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;textBoxNombreMod.Name" xml:space="preserve">
     <value>textBoxNombreMod</value>
@@ -4894,6 +5215,15 @@
   <data name="&gt;&gt;textBoxNombreMod.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
+  <data name="textBoxCodMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 78</value>
+  </data>
+  <data name="textBoxCodMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 20</value>
+  </data>
+  <data name="textBoxCodMod.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;textBoxCodMod.Name" xml:space="preserve">
     <value>textBoxCodMod</value>
   </data>
@@ -4906,6 +5236,15 @@
   <data name="&gt;&gt;textBoxCodMod.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="textBoxIdMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 52</value>
+  </data>
+  <data name="textBoxIdMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 20</value>
+  </data>
+  <data name="textBoxIdMod.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;textBoxIdMod.Name" xml:space="preserve">
     <value>textBoxIdMod</value>
   </data>
@@ -4917,6 +5256,27 @@
   </data>
   <data name="&gt;&gt;textBoxIdMod.ZOrder" xml:space="preserve">
     <value>21</value>
+  </data>
+  <data name="labelIdMod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelIdMod.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelIdMod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 55</value>
+  </data>
+  <data name="labelIdMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
+  </data>
+  <data name="labelIdMod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 14</value>
+  </data>
+  <data name="labelIdMod.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelIdMod.Text" xml:space="preserve">
+    <value>ID</value>
   </data>
   <data name="&gt;&gt;labelIdMod.Name" xml:space="preserve">
     <value>labelIdMod</value>
@@ -6971,7 +7331,7 @@
     <value>Top, Right</value>
   </data>
   <data name="comboBoxCate_Marca.Location" type="System.Drawing.Point, System.Drawing">
-    <value>644, 38</value>
+    <value>630, 38</value>
   </data>
   <data name="comboBoxCate_Marca.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -6998,7 +7358,7 @@
     <value>True</value>
   </data>
   <data name="labelCategorias_o_Marcas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>617, 17</value>
+    <value>603, 17</value>
   </data>
   <data name="labelCategorias_o_Marcas.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
@@ -7067,7 +7427,7 @@
     <value>445, 38</value>
   </data>
   <data name="textBoxPrecioMAX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
+    <value>38, 20</value>
   </data>
   <data name="textBoxPrecioMAX.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -7094,7 +7454,7 @@
     <value>345, 38</value>
   </data>
   <data name="textBoxPrecioMIN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
+    <value>38, 20</value>
   </data>
   <data name="textBoxPrecioMIN.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -7121,7 +7481,7 @@
     <value>17, 38</value>
   </data>
   <data name="textBoxListar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 20</value>
+    <value>246, 20</value>
   </data>
   <data name="textBoxListar.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -7148,10 +7508,13 @@
     <value>True</value>
   </data>
   <data name="labelListar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 17</value>
+    <value>115, 22</value>
+  </data>
+  <data name="labelListar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 1</value>
   </data>
   <data name="labelListar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>0, 14</value>
   </data>
   <data name="labelListar.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -7178,7 +7541,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="buttonBuscar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 356</value>
+    <value>220, 342</value>
   </data>
   <data name="buttonBuscar.Size" type="System.Drawing.Size, System.Drawing">
     <value>305, 38</value>
@@ -7208,7 +7571,7 @@
     <value>17, 64</value>
   </data>
   <data name="dataGridViewListar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>748, 286</value>
+    <value>734, 272</value>
   </data>
   <data name="dataGridViewListar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7225,656 +7588,17 @@
   <data name="&gt;&gt;dataGridViewListar.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="labelUrlMod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelUrlMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelUrlMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>606, 133</value>
-  </data>
-  <data name="labelUrlMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelUrlMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 14</value>
-  </data>
-  <data name="labelUrlMod.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="labelUrlMod.Text" xml:space="preserve">
-    <value>URL de la imagen</value>
-  </data>
-  <data name="labelUrlMod.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;labelUrlMod.Name" xml:space="preserve">
-    <value>labelUrlMod</value>
-  </data>
-  <data name="&gt;&gt;labelUrlMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelUrlMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelUrlMod.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelPrecioMax.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelPrecioMax.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelPrecioMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>606, 159</value>
-  </data>
-  <data name="labelPrecioMax.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelPrecioMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 14</value>
-  </data>
-  <data name="labelPrecioMax.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="labelPrecioMax.Text" xml:space="preserve">
-    <value>Precio Max</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMax.Name" xml:space="preserve">
-    <value>labelPrecioMax</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMax.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMax.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelPrecioMin.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelPrecioMin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelPrecioMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>606, 133</value>
-  </data>
-  <data name="labelPrecioMin.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelPrecioMin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 14</value>
-  </data>
-  <data name="labelPrecioMin.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="labelPrecioMin.Text" xml:space="preserve">
-    <value>Precio Min</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMin.Name" xml:space="preserve">
-    <value>labelPrecioMin</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMin.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMin.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelPrecioMod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelPrecioMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelPrecioMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>606, 107</value>
-  </data>
-  <data name="labelPrecioMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelPrecioMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 14</value>
-  </data>
-  <data name="labelPrecioMod.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="labelPrecioMod.Text" xml:space="preserve">
-    <value>Precio Fijo</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMod.Name" xml:space="preserve">
-    <value>labelPrecioMod</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelPrecioMod.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="labelDescripcionMod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelDescripcionMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelDescripcionMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 81</value>
-  </data>
-  <data name="labelDescripcionMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelDescripcionMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 14</value>
-  </data>
-  <data name="labelDescripcionMod.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="labelDescripcionMod.Text" xml:space="preserve">
-    <value>Descripcion</value>
-  </data>
-  <data name="&gt;&gt;labelDescripcionMod.Name" xml:space="preserve">
-    <value>labelDescripcionMod</value>
-  </data>
-  <data name="&gt;&gt;labelDescripcionMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelDescripcionMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelDescripcionMod.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="labelCategMod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelCategMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelCategMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 159</value>
-  </data>
-  <data name="labelCategMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelCategMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 14</value>
-  </data>
-  <data name="labelCategMod.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="labelCategMod.Text" xml:space="preserve">
-    <value>Categoria</value>
-  </data>
-  <data name="&gt;&gt;labelCategMod.Name" xml:space="preserve">
-    <value>labelCategMod</value>
-  </data>
-  <data name="&gt;&gt;labelCategMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelCategMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelCategMod.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="labelMarcaMod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelMarcaMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelMarcaMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 133</value>
-  </data>
-  <data name="labelMarcaMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelMarcaMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 14</value>
-  </data>
-  <data name="labelMarcaMod.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="labelMarcaMod.Text" xml:space="preserve">
-    <value>Marca</value>
-  </data>
-  <data name="&gt;&gt;labelMarcaMod.Name" xml:space="preserve">
-    <value>labelMarcaMod</value>
-  </data>
-  <data name="&gt;&gt;labelMarcaMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelMarcaMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelMarcaMod.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="labelNombreMod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelNombreMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelNombreMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 107</value>
-  </data>
-  <data name="labelNombreMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelNombreMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 14</value>
-  </data>
-  <data name="labelNombreMod.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="labelNombreMod.Text" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="&gt;&gt;labelNombreMod.Name" xml:space="preserve">
-    <value>labelNombreMod</value>
-  </data>
-  <data name="&gt;&gt;labelNombreMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelNombreMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelNombreMod.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="labelCodMod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelCodMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelCodMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 81</value>
-  </data>
-  <data name="labelCodMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelCodMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 14</value>
-  </data>
-  <data name="labelCodMod.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="labelCodMod.Text" xml:space="preserve">
-    <value>Codigo</value>
-  </data>
-  <data name="&gt;&gt;labelCodMod.Name" xml:space="preserve">
-    <value>labelCodMod</value>
-  </data>
-  <data name="&gt;&gt;labelCodMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelCodMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelCodMod.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="buttonDel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="buttonDel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="buttonDel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 302</value>
-  </data>
-  <data name="buttonDel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 114</value>
-  </data>
-  <data name="buttonDel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="buttonDel.Text" xml:space="preserve">
-    <value>ELIMINAR</value>
-  </data>
-  <data name="&gt;&gt;buttonDel.Name" xml:space="preserve">
-    <value>buttonDel</value>
-  </data>
-  <data name="&gt;&gt;buttonDel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonDel.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;buttonDel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="buttonMod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="buttonMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="buttonMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 183</value>
-  </data>
-  <data name="buttonMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 114</value>
-  </data>
-  <data name="buttonMod.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="buttonMod.Text" xml:space="preserve">
-    <value>MODIFICAR</value>
-  </data>
-  <data name="&gt;&gt;buttonMod.Name" xml:space="preserve">
-    <value>buttonMod</value>
-  </data>
-  <data name="&gt;&gt;buttonMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;buttonMod.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="dataGridMod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="dataGridMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 183</value>
-  </data>
-  <data name="dataGridMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>664, 233</value>
-  </data>
-  <data name="dataGridMod.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;dataGridMod.Name" xml:space="preserve">
-    <value>dataGridMod</value>
-  </data>
-  <data name="&gt;&gt;dataGridMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;dataGridMod.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="comboBoxCategMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 156</value>
-  </data>
-  <data name="comboBoxCategMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 21</value>
-  </data>
-  <data name="comboBoxCategMod.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;comboBoxCategMod.Name" xml:space="preserve">
-    <value>comboBoxCategMod</value>
-  </data>
-  <data name="&gt;&gt;comboBoxCategMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxCategMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;comboBoxCategMod.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="comboBoxMarcaMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 129</value>
-  </data>
-  <data name="comboBoxMarcaMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 21</value>
-  </data>
-  <data name="comboBoxMarcaMod.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;comboBoxMarcaMod.Name" xml:space="preserve">
-    <value>comboBoxMarcaMod</value>
-  </data>
-  <data name="&gt;&gt;comboBoxMarcaMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxMarcaMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;comboBoxMarcaMod.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="textBoxPrecioMaxMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 156</value>
-  </data>
-  <data name="textBoxPrecioMaxMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 20</value>
-  </data>
-  <data name="textBoxPrecioMaxMod.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMaxMod.Name" xml:space="preserve">
-    <value>textBoxPrecioMaxMod</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMaxMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMaxMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMaxMod.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="textBoxUrlMod.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textBoxUrlMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>606, 156</value>
-  </data>
-  <data name="textBoxUrlMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 20</value>
-  </data>
-  <data name="textBoxUrlMod.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="textBoxUrlMod.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;textBoxUrlMod.Name" xml:space="preserve">
-    <value>textBoxUrlMod</value>
-  </data>
-  <data name="&gt;&gt;textBoxUrlMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxUrlMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;textBoxUrlMod.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="textBoxPrecioMinMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 130</value>
-  </data>
-  <data name="textBoxPrecioMinMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 20</value>
-  </data>
-  <data name="textBoxPrecioMinMod.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMinMod.Name" xml:space="preserve">
-    <value>textBoxPrecioMinMod</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMinMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMinMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMinMod.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="textBoxPrecioMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 104</value>
-  </data>
-  <data name="textBoxPrecioMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 20</value>
-  </data>
-  <data name="textBoxPrecioMod.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMod.Name" xml:space="preserve">
-    <value>textBoxPrecioMod</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;textBoxPrecioMod.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="textBoxDescripMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 104</value>
-  </data>
-  <data name="textBoxDescripMod.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBoxDescripMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 73</value>
-  </data>
-  <data name="textBoxDescripMod.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBoxDescripMod.Name" xml:space="preserve">
-    <value>textBoxDescripMod</value>
-  </data>
-  <data name="&gt;&gt;textBoxDescripMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxDescripMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;textBoxDescripMod.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="textBoxNombreMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 104</value>
-  </data>
-  <data name="textBoxNombreMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 20</value>
-  </data>
-  <data name="textBoxNombreMod.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;textBoxNombreMod.Name" xml:space="preserve">
-    <value>textBoxNombreMod</value>
-  </data>
-  <data name="&gt;&gt;textBoxNombreMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxNombreMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;textBoxNombreMod.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="textBoxCodMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 78</value>
-  </data>
-  <data name="textBoxCodMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 20</value>
-  </data>
-  <data name="textBoxCodMod.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBoxCodMod.Name" xml:space="preserve">
-    <value>textBoxCodMod</value>
-  </data>
-  <data name="&gt;&gt;textBoxCodMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxCodMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;textBoxCodMod.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="textBoxIdMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 52</value>
-  </data>
-  <data name="textBoxIdMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 20</value>
-  </data>
-  <data name="textBoxIdMod.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textBoxIdMod.Name" xml:space="preserve">
-    <value>textBoxIdMod</value>
-  </data>
-  <data name="&gt;&gt;textBoxIdMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxIdMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;textBoxIdMod.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="labelIdMod.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelIdMod.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="labelIdMod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 55</value>
-  </data>
-  <data name="labelIdMod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 1</value>
-  </data>
-  <data name="labelIdMod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 14</value>
-  </data>
-  <data name="labelIdMod.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelIdMod.Text" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="&gt;&gt;labelIdMod.Name" xml:space="preserve">
-    <value>labelIdMod</value>
-  </data>
-  <data name="&gt;&gt;labelIdMod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelIdMod.Parent" xml:space="preserve">
-    <value>tabpageME</value>
-  </data>
-  <data name="&gt;&gt;labelIdMod.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
   <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
   <data name="menuStrip2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="menuStrip2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
   <data name="menuStrip2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="menuStrip2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 426</value>
+    <value>0, 0</value>
   </data>
   <data name="menuStrip2.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 24</value>

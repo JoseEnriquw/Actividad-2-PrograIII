@@ -164,20 +164,25 @@ namespace Presentacion
             // 
             resources.ApplyResources(this.textBoxPrecioMAX, "textBoxPrecioMAX");
             this.textBoxPrecioMAX.Name = "textBoxPrecioMAX";
+            this.textBoxPrecioMAX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressPrecio);
             // 
             // textBoxPrecioMIN
             // 
             resources.ApplyResources(this.textBoxPrecioMIN, "textBoxPrecioMIN");
             this.textBoxPrecioMIN.Name = "textBoxPrecioMIN";
+            this.textBoxPrecioMIN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressPrecio);
             // 
             // textBoxListar
             // 
             resources.ApplyResources(this.textBoxListar, "textBoxListar");
             this.textBoxListar.Name = "textBoxListar";
+            this.textBoxListar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressID);
             // 
             // labelListar
             // 
             resources.ApplyResources(this.labelListar, "labelListar");
+            this.labelListar.BackColor = System.Drawing.Color.Black;
+            this.labelListar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelListar.Name = "labelListar";
             // 
             // buttonBuscar
@@ -336,6 +341,7 @@ namespace Presentacion
             resources.ApplyResources(this.textBoxPrecioMaxMod, "textBoxPrecioMaxMod");
             this.textBoxPrecioMaxMod.Name = "textBoxPrecioMaxMod";
             this.textBoxPrecioMaxMod.TextChanged += new System.EventHandler(this.cambioMod);
+            this.textBoxPrecioMaxMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressPrecio);
             // 
             // textBoxUrlMod
             // 
@@ -347,12 +353,14 @@ namespace Presentacion
             resources.ApplyResources(this.textBoxPrecioMinMod, "textBoxPrecioMinMod");
             this.textBoxPrecioMinMod.Name = "textBoxPrecioMinMod";
             this.textBoxPrecioMinMod.TextChanged += new System.EventHandler(this.cambioMod);
+            this.textBoxPrecioMinMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressPrecio);
             // 
             // textBoxPrecioMod
             // 
             resources.ApplyResources(this.textBoxPrecioMod, "textBoxPrecioMod");
             this.textBoxPrecioMod.Name = "textBoxPrecioMod";
             this.textBoxPrecioMod.TextChanged += new System.EventHandler(this.cambioMod);
+            this.textBoxPrecioMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressPrecio);
             // 
             // textBoxDescripMod
             // 
@@ -377,6 +385,7 @@ namespace Presentacion
             resources.ApplyResources(this.textBoxIdMod, "textBoxIdMod");
             this.textBoxIdMod.Name = "textBoxIdMod";
             this.textBoxIdMod.TextChanged += new System.EventHandler(this.cambioMod);
+            this.textBoxIdMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressID);
             // 
             // labelIdMod
             // 
@@ -469,6 +478,7 @@ namespace Presentacion
             resources.ApplyResources(this.textBoxPrecioAdd, "textBoxPrecioAdd");
             this.textBoxPrecioAdd.Name = "textBoxPrecioAdd";
             this.textBoxPrecioAdd.TextChanged += new System.EventHandler(this.changedAddVerific);
+            this.textBoxPrecioAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressPrecio);
             // 
             // textBoxNombreAdd
             // 
@@ -486,6 +496,7 @@ namespace Presentacion
             // 
             resources.ApplyResources(this.textBoxIdAdd, "textBoxIdAdd");
             this.textBoxIdAdd.Name = "textBoxIdAdd";
+            this.textBoxIdAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacion_keyPressID);
             // 
             // labelCategoriaAdd
             // 

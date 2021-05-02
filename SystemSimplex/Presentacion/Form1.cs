@@ -27,7 +27,7 @@ namespace Presentacion
         Login login = new Login();
         ArticulosBussines negocio=new ArticulosBussines();
         string where = " ";
-        AccessData data=new AccessData("DESKTOP-C14H989\\SQLEXPRESS", "CATALOGO_DB");
+        AccessData data=new AccessData("(local)\\SQLEXPRESS", "CATALOGO_DB");
         //DESKTOP-Q2KI0EM\\SQLEXPRESS (Enrique)
         //DESKTOP-C14H989\\SQLEXPRESS (Adriel)
         
@@ -76,6 +76,7 @@ namespace Presentacion
         private void todoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Visibilidad(0);
+            tabControl.SelectedIndex = 1;
         }
 
         //Opción de barra de menu Listar por ID
@@ -229,8 +230,8 @@ namespace Presentacion
         //Cargar el Login
         private void Window_Load(object sender, EventArgs e)
         {
-           // login.ShowDialog();
-            //if (login.close) { this.Close(); }
+           login.ShowDialog();
+           if (login.close) { this.Close(); }
           
         }
         
@@ -247,48 +248,51 @@ namespace Presentacion
             dataGridMod.DataSource = negocio.listar(condicionMod());
         }
 
+        //Crea el Where de Modificar
         private string condicionMod()
         {
             //Crea la condicion
             bool andc = false; int cont = 0; string queryCondicion = " where ";
-            if (textBoxIdMod.Text != "") { queryCondicion += "id = " + textBoxIdMod.Text; andc = true; cont++; }
+            if (textBoxIdMod.Text != "") { queryCondicion += "A.id = " + textBoxIdMod.Text; andc = true; cont++; }
 
-            if (andc == true && textBoxCodMod.Text != "") {             queryCondicion += " and "; andc = false; }
-            if (textBoxCodMod.Text != "") { queryCondicion += "codigo LIKE '%" + textBoxCodMod.Text + "%'"; andc = true; cont++; }
+            if (andc == true && textBoxCodMod.Text != "") { queryCondicion += " and "; andc = false; }
+            if (textBoxCodMod.Text != "") { queryCondicion += "A.codigo LIKE '%" + textBoxCodMod.Text + "%'"; andc = true; cont++; }
 
-            if (andc == true && textBoxNombreMod.Text != "") {          queryCondicion += " and "; andc = false; }
-            if (textBoxNombreMod.Text != "") { queryCondicion += "nombre LIKE '%" + textBoxNombreMod.Text + "%'"; andc = true; cont++; }
+            if (andc == true && textBoxNombreMod.Text != "") { queryCondicion += " and "; andc = false; }
+            if (textBoxNombreMod.Text != "") { queryCondicion += "A.nombre LIKE '%" + textBoxNombreMod.Text + "%'"; andc = true; cont++; }
 
-            if (andc == true && textBoxDescripMod.Text != "") {         queryCondicion += " and "; andc = false; }
-            if (textBoxDescripMod.Text != "") { queryCondicion += "descripcion LIKE '%" + textBoxDescripMod.Text + "%'"; andc = true; cont++; }
+            if (andc == true && textBoxDescripMod.Text != "") { queryCondicion += " and "; andc = false; }
+            if (textBoxDescripMod.Text != "") { queryCondicion += "A.descripcion LIKE '%" + textBoxDescripMod.Text + "%'"; andc = true; cont++; }
 
-            if (andc == true && textBoxPrecioMod.Text != "" || textBoxPrecioMinMod.Text != "" || textBoxPrecioMaxMod.Text != "")
+            if (andc == true && textBoxPrecioMod.Text != "" || andc == true && textBoxPrecioMinMod.Text != "" || andc == true && textBoxPrecioMaxMod.Text != "")
             { queryCondicion += " and "; andc = false; cont++; }
-            if (textBoxPrecioMod.Text != "") { queryCondicion += "precio = " + double.Parse(textBoxPrecioMod.Text); ; andc = true; }
-            else if (textBoxPrecioMinMod.Text != "" && textBoxPrecioMaxMod.Text != "")
-            { queryCondicion += "between " + textBoxPrecioMinMod.Text + " and " + textBoxPrecioMaxMod.Text;}
-            else if (textBoxPrecioMinMod.Text != "") { queryCondicion += "precio <= " + textBoxPrecioMinMod.Text; }
-            else if (textBoxPrecioMaxMod.Text != "") { queryCondicion += "precio >= " + textBoxPrecioMaxMod.Text; }
 
-            if (andc == true && comboBoxMarcaMod.SelectedIndex >= 0) {  queryCondicion += " and "; andc = false; }
+            if (textBoxPrecioMod.Text != "") { queryCondicion += "A.precio = " + textBoxPrecioMod.Text; andc = true; cont++; }
+            else if (textBoxPrecioMinMod.Text != "" && textBoxPrecioMaxMod.Text != "" && decimal.Parse(textBoxPrecioMinMod.Text) < decimal.Parse(textBoxPrecioMaxMod.Text))
+            { queryCondicion += " A.precio between " + decimal.Parse(textBoxPrecioMinMod.Text) + " and " + decimal.Parse(textBoxPrecioMaxMod.Text); andc = true; cont++; }
+            else if (textBoxPrecioMinMod.Text != "") { queryCondicion += "A.precio >= " + decimal.Parse(textBoxPrecioMinMod.Text); andc = true; cont++; }
+            else if (textBoxPrecioMaxMod.Text != "") { queryCondicion += "A.precio <= " + decimal.Parse(textBoxPrecioMaxMod.Text); andc = true; cont++; }
+
+            if (andc == true && comboBoxMarcaMod.SelectedIndex >= 0) { queryCondicion += " and "; andc = false; }
             if (comboBoxMarcaMod.SelectedIndex >= 0)
             {
                 int cb = comboBoxMarcaMod.SelectedIndex + 1;
-                queryCondicion += "idMarca = " + cb.ToString();
+                queryCondicion += "A.idMarca = " + cb.ToString();
                 andc = true; cont++;
             }
 
-            if (andc == true && comboBoxCategMod.SelectedIndex >= 0) { queryCondicion += " and ";}
+            if (andc == true && comboBoxCategMod.SelectedIndex >= 0) { queryCondicion += " and "; }
             if (comboBoxCategMod.SelectedIndex >= 0)
             {
                 int cb = comboBoxCategMod.SelectedIndex + 1;
-                queryCondicion += "idCategoria = " + cb.ToString();
+                queryCondicion += "A.idCategoria = " + cb.ToString();
                 cont++;
             }
             if (cont == 0) { queryCondicion = ""; }
             return queryCondicion;
         }
 
+        //Crear los Where
         private void crear_where()
         {
           if(labelListar.Visible && labelListar.Text=="ID" && textBoxListar.TextLength > 0)
@@ -350,13 +354,13 @@ namespace Presentacion
                 {
                     bool and = false;
                     string update = "update articulos set ";
-                    if (textBoxIdMod.Text != "") { update += "id = " + textBoxIdMod.Text; and = true; }
+                    if (textBoxIdMod.Text != "") { update += " id = " + textBoxIdMod.Text; and = true; }
 
                     if (and == true && textBoxCodMod.Text != "") {              update += ", "; and = false; }
-                    if (textBoxCodMod.Text != "") { update += "codigo = '" + textBoxCodMod.Text + "'"; and = true; }
+                    if (textBoxCodMod.Text != "") { update += " codigo = '" + textBoxCodMod.Text + "'"; and = true; }
 
                     if (and == true && textBoxNombreMod.Text != "") {           update += ", "; and = false; }
-                    if (textBoxNombreMod.Text != "") { update += "nombre = '" + textBoxNombreMod.Text + "'"; and = true; }
+                    if (textBoxNombreMod.Text != "") { update += "  nombre = '" + textBoxNombreMod.Text + "'"; and = true; }
 
                     if (and == true && textBoxDescripMod.Text != "") {          update += ", "; and = false; }
                     if (textBoxDescripMod.Text != "") { update += "descripcion ='" + textBoxDescripMod.Text + "'"; and = true; }
@@ -422,5 +426,19 @@ namespace Presentacion
         private void buttonDel_MouseLeave(object sender, EventArgs e){      buttonDel.BackColor = Color.DimGray;}
         private void buttonAdd_MouseHover(object sender, EventArgs e){      buttonAdd.BackColor = Color.Black;}
         private void buttonAdd_MouseLeave(object sender, EventArgs e){      buttonAdd.BackColor = Color.DimGray; }
+
+        private void validacion_keyPressID(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+  
+
+        private void validacion_keyPressPrecio(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8 && e.KeyChar != 46)
+                e.Handled = true;
+        }
     }
 }

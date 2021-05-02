@@ -12,10 +12,9 @@ namespace Bussines
         public List<Articulo> listar(string where)
         {
             List<Articulo> lista= new List<Articulo>();
-            //"data source=DESKTOP-Q2KI0EM\\SQLEXPRESS;initial catalog=CATALOGO_DB;integrated security=true;"
-            AccessData accessdata = new AccessData("DESKTOP-C14H989\\SQLEXPRESS", "CATALOGO_DB") ;
-            //DESKTOP-Q2KI0EM\\SQLEXPRESS (Enrique)
-            //DESKTOP-C14H989\\SQLEXPRESS (Adriel)
+           
+            AccessData accessdata = new AccessData("(local)\\SQLEXPRESS", "CATALOGO_DB") ;
+         
             try
             {
                 
