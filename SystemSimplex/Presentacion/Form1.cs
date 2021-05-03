@@ -71,11 +71,16 @@ namespace Presentacion
                 break;
             }
         }
+
+        //Boton buscar de Listar
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            crear_where();
-            dataGridViewListar.DataSource=negocio.listar(where);
-            dataGridViewListar.Columns[6].Visible = false;
+            where = " ";
+            if (crear_where())
+            {
+                dataGridViewListar.DataSource = negocio.listar(where);
+                dataGridViewListar.Columns[6].Visible = false;
+            }
         }
 
         //Opción de barra de menu Listar Todo
@@ -303,30 +308,42 @@ namespace Presentacion
         }
 
         //Crear los Where
-        private void crear_where()
+        private bool crear_where()
         {
-          if(labelListar.Visible && labelListar.Text=="ID" && textBoxListar.TextLength > 0)
-            { where = "where A.Id= '" + textBoxListar.Text + "'";}
+            bool consultar = true;
 
-            if (labelListar.Visible && labelListar.Text == "Codigo" && textBoxListar.TextLength > 0)
-            { where = "where A.Codigo like  '%" + textBoxListar.Text + "%'";}
+            if (labelListar.Visible && labelListar.Text == "ID" && textBoxListar.TextLength > 0)
+            { where = "where A.Id= '" + textBoxListar.Text + "'"; }
 
-            if (labelListar.Visible && labelListar.Text == "Nombre" && textBoxListar.TextLength > 0)
-            { where = "where A.Nombre like '%" + textBoxListar.Text + "%'";}
 
-            if (labelListar.Visible && labelListar.Text == "Descripcion" && textBoxListar.TextLength > 0)
-            { where = "where A.Descripcion like '%" + textBoxListar.Text + "%'";}
+            else if (labelListar.Visible && labelListar.Text == "Codigo" && textBoxListar.TextLength > 0)
+            { where = "where A.Codigo like  '%" + textBoxListar.Text + "%'"; }
 
-            if (labelCategorias_o_Marcas.Visible && labelCategorias_o_Marcas.Text=="Marca" && comboBoxCate_Marca.SelectedIndex>=0)
-            { where = "where M.Descripcion = '" + comboBoxCate_Marca.SelectedItem + "'";}
 
-            if (labelCategorias_o_Marcas.Visible && labelCategorias_o_Marcas.Text == "Categoria" && comboBoxCate_Marca.SelectedIndex >= 0)
-            { where = "where C.Descripcion = '" + comboBoxCate_Marca.SelectedItem + "'";}
+            else if (labelListar.Visible && labelListar.Text == "Nombre" && textBoxListar.TextLength > 0)
+            { where = "where A.Nombre like '%" + textBoxListar.Text + "%'"; }
 
-            if (labelRangoPreciolistar.Visible && textBoxPrecioMAX.TextLength>0 && textBoxPrecioMIN.TextLength > 0)
-            { where = "where A.Precio between " + textBoxPrecioMIN.Text + " and "+ textBoxPrecioMAX.Text;}
+
+            else if (labelListar.Visible && labelListar.Text == "Descripcion" && textBoxListar.TextLength > 0)
+            { where = "where A.Descripcion like '%" + textBoxListar.Text + "%'"; }
+
+
+            else if (labelCategorias_o_Marcas.Visible && labelCategorias_o_Marcas.Text == "Marca" && comboBoxCate_Marca.SelectedIndex >= 0)
+            { where = "where M.Descripcion = '" + comboBoxCate_Marca.SelectedItem + "'"; }
+
+
+            else if (labelCategorias_o_Marcas.Visible && labelCategorias_o_Marcas.Text == "Categoria" && comboBoxCate_Marca.SelectedIndex >= 0)
+            { where = "where C.Descripcion = '" + comboBoxCate_Marca.SelectedItem + "'"; }
+
+
+            else if (labelRangoPreciolistar.Visible && textBoxPrecioMAX.TextLength > 0 && textBoxPrecioMIN.TextLength > 0 && decimal.Parse(textBoxPrecioMAX.Text) > decimal.Parse(textBoxPrecioMIN.Text))
+            { where = "where A.Precio between " + textBoxPrecioMIN.Text + " and " + textBoxPrecioMAX.Text; }
+            else consultar = false;
+
+            return consultar;
         }
 
+        //Pregunta si desea modificar la cantidad de datos especificada
         public bool cantidadModificar(int cant)
         {
             bool opc = false;

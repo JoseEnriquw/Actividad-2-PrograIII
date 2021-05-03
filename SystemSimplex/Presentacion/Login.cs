@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public partial class Login : Form
     {
-        //Falta obtener estos datos: por ahora estan vacios
+        
 
         public bool close;
         private bool logueado;
@@ -23,6 +23,7 @@ namespace Presentacion
         {
             InitializeComponent();
             close = logueado = false;
+            //Pregunta si existe el archivo, sino lo crea y le carga los datos de usuarios por defecto
             if (!File.Exists("Usuarios_Login.txt")) {
                 TextWriter escribir = new StreamWriter("Usuarios_Login.txt");
                 escribir.WriteLine("Usuario");
@@ -38,10 +39,7 @@ namespace Presentacion
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            //Falta guardar el server y el data base:
-            /*
-            string datasource = "";
-            string initialcatalog = "";*/
+            
             StreamReader archivo = new StreamReader("Usuarios_Login.txt");
             int x=0;
             string text=" ";

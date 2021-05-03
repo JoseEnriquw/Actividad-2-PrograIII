@@ -58,3 +58,4 @@ C:\Users\Jose\source\repos\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\
 C:\Users\Jose\source\repos\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Jose\source\repos\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\Adriel Rasjido\Documents\GitHub\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.Detalles.resources
+C:\Users\Jose\source\repos\Actividad-2-PrograIII\SystemSimplex\Presentacion\obj\Debug\Presentacion.Detalles.resources
