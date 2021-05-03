@@ -86,5 +86,9 @@ namespace Presentacion
             close = true;
             }
         }
+
+        private void buttonLogin_MouseHover(object sender, EventArgs e){ buttonLogin.BackColor = Color.Aquamarine; buttonLogin.ForeColor = Color.Black; }
+
+        private void buttonLogin_MouseLeave(object sender, EventArgs e){ buttonLogin.BackColor = Color.Black; buttonLogin.ForeColor = Color.White; }
     }
 }

@@ -86,6 +86,19 @@ namespace Presentacion
             this.buttonAdd = new System.Windows.Forms.Button();
             this.labelImagenAdd = new System.Windows.Forms.Label();
             this.pictureBoxAdd = new System.Windows.Forms.PictureBox();
+            this.tabPageConf = new System.Windows.Forms.TabPage();
+            this.groupBoxConf = new System.Windows.Forms.GroupBox();
+            this.labelPassNew = new System.Windows.Forms.Label();
+            this.labelPassAct = new System.Windows.Forms.Label();
+            this.labelUserNew = new System.Windows.Forms.Label();
+            this.labelUserAct = new System.Windows.Forms.Label();
+            this.textBoxPassAct = new System.Windows.Forms.TextBox();
+            this.textBoxUserAct = new System.Windows.Forms.TextBox();
+            this.textBoxPassNew = new System.Windows.Forms.TextBox();
+            this.textBoxUserNew = new System.Windows.Forms.TextBox();
+            this.buttonConf = new System.Windows.Forms.Button();
+            this.radioButtonAdd = new System.Windows.Forms.RadioButton();
+            this.radioButtonCamb = new System.Windows.Forms.RadioButton();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.listarArticuloPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,6 +120,8 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMod)).BeginInit();
             this.tabpageAgregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdd)).BeginInit();
+            this.tabPageConf.SuspendLayout();
+            this.groupBoxConf.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +131,7 @@ namespace Presentacion
             this.tabControl.Controls.Add(this.tabpageListar);
             this.tabControl.Controls.Add(this.tabpageME);
             this.tabControl.Controls.Add(this.tabpageAgregar);
+            this.tabControl.Controls.Add(this.tabPageConf);
             resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -201,6 +217,7 @@ namespace Presentacion
             resources.ApplyResources(this.dataGridViewListar, "dataGridViewListar");
             this.dataGridViewListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListar.Name = "dataGridViewListar";
+            this.dataGridViewListar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListar_CellClick);
             // 
             // tabpageME
             // 
@@ -553,6 +570,98 @@ namespace Presentacion
             this.pictureBoxAdd.Name = "pictureBoxAdd";
             this.pictureBoxAdd.TabStop = false;
             // 
+            // tabPageConf
+            // 
+            resources.ApplyResources(this.tabPageConf, "tabPageConf");
+            this.tabPageConf.Controls.Add(this.groupBoxConf);
+            this.tabPageConf.Name = "tabPageConf";
+            this.tabPageConf.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxConf
+            // 
+            this.groupBoxConf.BackColor = System.Drawing.Color.White;
+            this.groupBoxConf.Controls.Add(this.labelPassNew);
+            this.groupBoxConf.Controls.Add(this.labelPassAct);
+            this.groupBoxConf.Controls.Add(this.labelUserNew);
+            this.groupBoxConf.Controls.Add(this.labelUserAct);
+            this.groupBoxConf.Controls.Add(this.textBoxPassAct);
+            this.groupBoxConf.Controls.Add(this.textBoxUserAct);
+            this.groupBoxConf.Controls.Add(this.textBoxPassNew);
+            this.groupBoxConf.Controls.Add(this.textBoxUserNew);
+            this.groupBoxConf.Controls.Add(this.buttonConf);
+            this.groupBoxConf.Controls.Add(this.radioButtonAdd);
+            this.groupBoxConf.Controls.Add(this.radioButtonCamb);
+            resources.ApplyResources(this.groupBoxConf, "groupBoxConf");
+            this.groupBoxConf.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBoxConf.Name = "groupBoxConf";
+            this.groupBoxConf.TabStop = false;
+            // 
+            // labelPassNew
+            // 
+            resources.ApplyResources(this.labelPassNew, "labelPassNew");
+            this.labelPassNew.Name = "labelPassNew";
+            // 
+            // labelPassAct
+            // 
+            resources.ApplyResources(this.labelPassAct, "labelPassAct");
+            this.labelPassAct.Name = "labelPassAct";
+            // 
+            // labelUserNew
+            // 
+            resources.ApplyResources(this.labelUserNew, "labelUserNew");
+            this.labelUserNew.Name = "labelUserNew";
+            // 
+            // labelUserAct
+            // 
+            resources.ApplyResources(this.labelUserAct, "labelUserAct");
+            this.labelUserAct.Name = "labelUserAct";
+            // 
+            // textBoxPassAct
+            // 
+            resources.ApplyResources(this.textBoxPassAct, "textBoxPassAct");
+            this.textBoxPassAct.Name = "textBoxPassAct";
+            this.textBoxPassAct.TextChanged += new System.EventHandler(this.cambioConfig);
+            // 
+            // textBoxUserAct
+            // 
+            resources.ApplyResources(this.textBoxUserAct, "textBoxUserAct");
+            this.textBoxUserAct.Name = "textBoxUserAct";
+            this.textBoxUserAct.TextChanged += new System.EventHandler(this.cambioConfig);
+            // 
+            // textBoxPassNew
+            // 
+            resources.ApplyResources(this.textBoxPassNew, "textBoxPassNew");
+            this.textBoxPassNew.Name = "textBoxPassNew";
+            this.textBoxPassNew.TextChanged += new System.EventHandler(this.cambioConfig);
+            // 
+            // textBoxUserNew
+            // 
+            resources.ApplyResources(this.textBoxUserNew, "textBoxUserNew");
+            this.textBoxUserNew.Name = "textBoxUserNew";
+            this.textBoxUserNew.TextChanged += new System.EventHandler(this.cambioConfig);
+            // 
+            // buttonConf
+            // 
+            resources.ApplyResources(this.buttonConf, "buttonConf");
+            this.buttonConf.Name = "buttonConf";
+            this.buttonConf.UseVisualStyleBackColor = true;
+            this.buttonConf.Click += new System.EventHandler(this.buttonConf_Click);
+            // 
+            // radioButtonAdd
+            // 
+            resources.ApplyResources(this.radioButtonAdd, "radioButtonAdd");
+            this.radioButtonAdd.Checked = true;
+            this.radioButtonAdd.Name = "radioButtonAdd";
+            this.radioButtonAdd.TabStop = true;
+            this.radioButtonAdd.UseVisualStyleBackColor = true;
+            this.radioButtonAdd.CheckedChanged += new System.EventHandler(this.cambiocheck);
+            // 
+            // radioButtonCamb
+            // 
+            resources.ApplyResources(this.radioButtonCamb, "radioButtonCamb");
+            this.radioButtonCamb.Name = "radioButtonCamb";
+            this.radioButtonCamb.UseVisualStyleBackColor = true;
+            // 
             // menuStrip2
             // 
             this.menuStrip2.BackColor = System.Drawing.Color.White;
@@ -649,6 +758,7 @@ namespace Presentacion
             // 
             this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
             resources.ApplyResources(this.configuracionToolStripMenuItem, "configuracionToolStripMenuItem");
+            this.configuracionToolStripMenuItem.Click += new System.EventHandler(this.configuracionToolStripMenuItem_Click);
             // 
             // systemSimplex
             // 
@@ -672,6 +782,9 @@ namespace Presentacion
             this.tabpageAgregar.ResumeLayout(false);
             this.tabpageAgregar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdd)).EndInit();
+            this.tabPageConf.ResumeLayout(false);
+            this.groupBoxConf.ResumeLayout(false);
+            this.groupBoxConf.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -751,6 +864,19 @@ namespace Presentacion
         private System.Windows.Forms.TextBox textBoxCodMod;
         private System.Windows.Forms.TextBox textBoxIdMod;
         private System.Windows.Forms.Label labelIdMod;
+        private System.Windows.Forms.TabPage tabPageConf;
+        private System.Windows.Forms.GroupBox groupBoxConf;
+        private System.Windows.Forms.Label labelPassNew;
+        private System.Windows.Forms.Label labelPassAct;
+        private System.Windows.Forms.Label labelUserNew;
+        private System.Windows.Forms.Label labelUserAct;
+        private System.Windows.Forms.TextBox textBoxPassAct;
+        private System.Windows.Forms.TextBox textBoxUserAct;
+        private System.Windows.Forms.TextBox textBoxPassNew;
+        private System.Windows.Forms.TextBox textBoxUserNew;
+        private System.Windows.Forms.Button buttonConf;
+        private System.Windows.Forms.RadioButton radioButtonAdd;
+        private System.Windows.Forms.RadioButton radioButtonCamb;
     }
 }
 

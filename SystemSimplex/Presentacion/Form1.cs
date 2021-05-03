@@ -25,6 +25,7 @@ namespace Presentacion
     public partial class systemSimplex : Form
     {
         Login login = new Login();
+        Detalles detalles = new Detalles();
         ArticulosBussines negocio=new ArticulosBussines();
         string where = " ";
         AccessData data=new AccessData("(local)\\SQLEXPRESS", "CATALOGO_DB");
@@ -59,6 +60,11 @@ namespace Presentacion
                 case 4:
                     textBoxCodAdd.Text = "";textBoxDescripAdd.Text = "";textBoxIdAdd.Text = "";textBoxNombreAdd.Text = "";textBoxPrecioAdd.Text = "";textBoxUrlAdd.Text = "";buttonAdd.Enabled = false;
                     pictureBoxAdd.Load("https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-red-cross-with-the-outline-coming-out-png-image_1761934.jpg");
+                break;
+                case 5:
+                    buttonConf.Enabled = false;
+                    textBoxPassAct.Text = ""; textBoxPassNew.Text = "";
+                    textBoxUserAct.Text = ""; textBoxUserNew.Text = "";
                     break;
                 default:
                     textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = textBoxListar.Visible = labelListar.Visible = labelRangoPreciolistar.Visible = comboBoxCate_Marca.Visible = labelCategorias_o_Marcas.Visible = false;
@@ -133,8 +139,6 @@ namespace Presentacion
             textBoxPrecioMAX.Text = textBoxPrecioMIN.Text=" ";
         }
 
-        //Cambios agregados x adriel:
-
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e) //Agregar a 
         {
             tabControl.SelectedIndex = 3;
@@ -157,6 +161,12 @@ namespace Presentacion
             comboBoxCategMod.Items.Clear();
             Listarcombobox(ref comboBoxMarcaMod, "select * from marcas");
             Listarcombobox(ref comboBoxCategMod, "select * from categorias");
+        }
+
+        private void configuracionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedIndex = 4;
+            Visibilidad(5);
         }
 
 
@@ -439,6 +449,117 @@ namespace Presentacion
         {
             if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8 && e.KeyChar != 46)
                 e.Handled = true;
+        }
+
+        private void dataGridViewListar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Int32 selectedCellCount = dataGridViewListar.GetCellCount(DataGridViewElementStates.Selected);
+            int fila = -1;
+            if (selectedCellCount > 0)
+            {
+                new System.Text.StringBuilder();
+                for (int i = 0; i < selectedCellCount; i++)
+                {
+                    fila = dataGridViewListar.SelectedCells[i].RowIndex;
+                }
+                detalles.id(dataGridViewListar[0, fila].Value.ToString());
+                detalles.cod(dataGridViewListar[1, fila].Value.ToString());
+                detalles.nombre(dataGridViewListar[2, fila].Value.ToString());
+                detalles.descrip(dataGridViewListar[3, fila].Value.ToString());
+                detalles.marca(dataGridViewListar[4, fila].Value.ToString());
+                detalles.categ(dataGridViewListar[5, fila].Value.ToString());
+                detalles.imagen(dataGridViewListar[6, fila].Value.ToString());
+                detalles.precio(dataGridViewListar[7, fila].Value.ToString());
+
+                detalles.ShowDialog();
+            }
+        }
+
+        private void cambiocheck(object sender, EventArgs e)
+        {
+            Visibilidad(5);
+            if (radioButtonCamb.Checked == true)
+            {
+                labelUserAct.Visible = true; textBoxUserAct.Visible = true;
+                labelPassAct.Visible = true; textBoxPassAct.Visible = true;
+            }
+            else
+            {
+                labelUserAct.Visible = false; textBoxUserAct.Visible = false;
+                labelPassAct.Visible = false; textBoxPassAct.Visible = false;
+            }
+        }
+
+        private void cambioConfig(object sender,EventArgs e)
+        {
+            if (radioButtonCamb.Checked == true && textBoxUserAct.Text != "" && textBoxUserNew.Text != "" && textBoxPassAct.Text != "" && textBoxPassNew.Text != "") { buttonConf.Enabled = true; }
+            else if (radioButtonCamb.Checked == false && textBoxUserNew.Text != "" && textBoxPassNew.Text != "") { buttonConf.Enabled = true; }
+            else { buttonConf.Enabled = false; }
+        }
+
+        class usuarios
+        {
+            public string us { get; set; }
+            public string pss { get; set; }
+        }
+
+        private void buttonConf_Click(object sender, EventArgs e)
+        {
+            bool user = false; bool error = true;
+            if (radioButtonCamb.Checked == true)
+            {
+                StreamReader archivo = new StreamReader("Usuarios_Login.txt");
+                int x = 0; int y = 0;
+                string text = " "; string users = ""; string pass = "";
+                while ((text = archivo.ReadLine()) != null)
+                {
+                    x++;
+                    if (x % 2 != 0){
+                        users = text;
+                        if (textBoxUserAct.Text == text){ user = true;}
+                    }
+                    else
+                    {
+                        new usuarios() { us = users,pss=pass, };
+                        if (user == true && textBoxPassAct.Text==text)
+                        {
+                            error = false;
+                            List<usuarios> listaUser = new List<usuarios>();
+                            DialogResult result = MessageBox.Show("DESEAS CAMBIAR TU USUARIO Y CONTRASEÑA?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+                            if (result.ToString() == "Yes")
+                            {
+                                listaUser[y].us = textBoxUserNew.Text;
+                                listaUser[y].pss = textBoxPassNew.Text;
+                                archivo.Close();
+                                File.Delete("Usuarios_Login.txt");
+                                TextWriter escribir = new StreamWriter("Usuarios_Login.txt");
+                                for(int z = 0; z < listaUser.Count(); z++)
+                                {
+                                    escribir.WriteLine(listaUser[z].us);
+                                    escribir.WriteLine(listaUser[z].pss);
+                                }
+                                MessageBox.Show("Cambios agregados correctamente");
+                            }
+                        }
+                        else{ user = false;}
+                    }
+                    y++;
+                }
+            }
+            else
+            {
+                error = false;
+                TextWriter escribir = new StreamWriter("Usuarios_Login.txt");
+                DialogResult result = MessageBox.Show("DESEAS AGREGAR UN NUEVO USUARIO?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+                if (result.ToString() == "Yes")
+                {
+                    escribir.WriteLine(textBoxUserNew.Text);
+                    escribir.WriteLine(textBoxPassNew.Text);
+                    escribir.Close();
+                    MessageBox.Show("Cambios agregados correctamente");
+                }
+            }
+            if (error == true) { MessageBox.Show("Hubo un error, verifica el usuario y contraseña"); }
         }
     }
 }
