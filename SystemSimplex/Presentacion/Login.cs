@@ -14,8 +14,6 @@ namespace Presentacion
 {
     public partial class Login : Form
     {
-        
-
         public bool close;
         private bool logueado;
         
@@ -31,62 +29,44 @@ namespace Presentacion
                 escribir.WriteLine("Administrador");
                 escribir.WriteLine("123456");
                 escribir.Close();
-
             };
         }
 
-       
-
+        //Al presionar el boton Login
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            
             StreamReader archivo = new StreamReader("Usuarios_Login.txt");
             int x=0;
             string text=" ";
             bool aux = false;
             bool salir_while=true;
-            while((text=archivo.ReadLine()) != null && salir_while) {
-            
-                x++;
+            while((text=archivo.ReadLine()) != null && salir_while) { x++;
                 if (x % 2 == 0)
                 {
                     if(textBoxPass.Text == text && aux)
                     {
-                        
-                        MessageBox.Show("Logueado correctamente");
-                        logueado = true;
-                         
-                         salir_while = false;
-                         this.Close();
-                        
-                        
+                        MessageBox.Show("Logueado correctamente"); logueado = true;
+                        salir_while = false; this.Close();
                     }
                     else aux = false;
-
                 }
                 else
                 {
-                    if (textBoxUser.Text == text) aux = true;
-                    else aux = false;
-
+                    if (textBoxUser.Text == text) aux = true; else aux = false;
                 }
             }
-         
-            
-            if(!aux) MessageBox.Show("Hubo un error, verifica tu usario o contraseña");
-            archivo.Close();
-
+            if(!aux) MessageBox.Show("Hubo un error, verifica tu usario o contraseña"); archivo.Close();
         }
 
+        //Al cerrar el login
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (logueado==false) { 
-            close = true;
-            }
+            if (logueado==false) { close = true; }
         }
 
+        //Inicio botones colores
         private void buttonLogin_MouseHover(object sender, EventArgs e){ buttonLogin.BackColor = Color.Aquamarine; buttonLogin.ForeColor = Color.Black; }
-
         private void buttonLogin_MouseLeave(object sender, EventArgs e){ buttonLogin.BackColor = Color.Black; buttonLogin.ForeColor = Color.White; }
+        //Fin botones colores
     }
 }

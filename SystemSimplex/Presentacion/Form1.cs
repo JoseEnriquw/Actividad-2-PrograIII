@@ -13,15 +13,10 @@ using Dominio;
 
 using System.IO;
 
+//Creado por Jose Enrique Menendez & Adriel Elian Rasjido
 
 namespace Presentacion
 {
-    /// Pestañas:
-    /// 1-Pestaña principal de interfaz; nombre("tabpageMenu") 
-    /// 2-Pestaña de Listar; nombre("tabpageListar")
-    /// 3-Pestaña de Modificar y Eliminar("tabpageME")
-    /// 4-Pestaña de Agregar; nombre("tabpageAgregar")
-    
     public partial class systemSimplex : Form
     {
         Login login = new Login();
@@ -29,10 +24,6 @@ namespace Presentacion
         ArticulosBussines negocio=new ArticulosBussines();
         string where = " ";
         AccessData data=new AccessData("(local)\\SQLEXPRESS", "CATALOGO_DB");
-        //DESKTOP-Q2KI0EM\\SQLEXPRESS (Enrique)
-        //DESKTOP-C14H989\\SQLEXPRESS (Adriel)
-        
-
         public systemSimplex()
         {
             InitializeComponent();
@@ -42,33 +33,39 @@ namespace Presentacion
         private void Visibilidad(short aux) {
             dataGridViewListar.DataSource = null;
             where = " ";
-            switch (aux){
+            switch (aux)
+            {
+                case 0:
+                    todoToolStripMenuItem.Checked = true;
+                    textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = textBoxListar.Visible = labelListar.Visible = labelRangoPreciolistar.Visible = comboBoxCate_Marca.Visible = labelCategorias_o_Marcas.Visible = false;
+                    break;
                 case 1:
+                    todoToolStripMenuItem.Checked = false;
                     textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = comboBoxCate_Marca.Visible = labelRangoPreciolistar.Visible = labelCategorias_o_Marcas.Visible = false;
                     textBoxListar.Visible = labelListar.Visible = true;
-                break;
+                    textBoxListar.Text = " ";
+                    break;
                 case 2:
-                    textBoxListar.Visible = labelListar.Visible = comboBoxCate_Marca.Visible  = labelCategorias_o_Marcas.Visible = false;
+                    todoToolStripMenuItem.Checked = false;
+                    textBoxListar.Visible = labelListar.Visible = comboBoxCate_Marca.Visible = labelCategorias_o_Marcas.Visible = false;
                     textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = labelRangoPreciolistar.Visible = true;
-                break;
+                    break;
                 case 3:
+                    todoToolStripMenuItem.Checked = false;
                     comboBoxCate_Marca.Items.Clear();
                     comboBoxCate_Marca.Text = " ";
-                    textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = textBoxListar.Visible = labelListar.Visible  = labelRangoPreciolistar.Visible = false;
-                    comboBoxCate_Marca.Visible =labelCategorias_o_Marcas.Visible = true;
-                break;
+                    textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = textBoxListar.Visible = labelListar.Visible = labelRangoPreciolistar.Visible = false;
+                    comboBoxCate_Marca.Visible = labelCategorias_o_Marcas.Visible = true;
+                    break;
                 case 4:
-                    textBoxCodAdd.Text = "";textBoxDescripAdd.Text = "";textBoxIdAdd.Text = "";textBoxNombreAdd.Text = "";textBoxPrecioAdd.Text = "";textBoxUrlAdd.Text = "";buttonAdd.Enabled = false;
+                    textBoxCodAdd.Text = ""; textBoxDescripAdd.Text = ""; textBoxIdAdd.Text = ""; textBoxNombreAdd.Text = ""; textBoxPrecioAdd.Text = ""; textBoxUrlAdd.Text = ""; buttonAdd.Enabled = false;
                     pictureBoxAdd.Load("https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-red-cross-with-the-outline-coming-out-png-image_1761934.jpg");
-                break;
+                    break;
                 case 5:
                     buttonConf.Enabled = false;
-                    textBoxPassAct.Text = ""; textBoxPassNew.Text = "";
-                    textBoxUserAct.Text = ""; textBoxUserNew.Text = "";
+                    textBoxPassAct.Text = ""; textBoxPassNew.Text = ""; textBoxPassAct.Visible = false; textBoxUserAct.Visible = false;
+                    textBoxUserAct.Text = ""; textBoxUserNew.Text = ""; labelPassAct.Visible = false;   labelUserAct.Visible = false;
                     break;
-                default:
-                    textBoxPrecioMAX.Visible = textBoxPrecioMIN.Visible = textBoxListar.Visible = labelListar.Visible = labelRangoPreciolistar.Visible = comboBoxCate_Marca.Visible = labelCategorias_o_Marcas.Visible = false;
-                break;
             }
         }
 
@@ -76,7 +73,7 @@ namespace Presentacion
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
             where = " ";
-            if (crear_where())
+            if (crear_where() || todoToolStripMenuItem.Checked == true)
             {
                 dataGridViewListar.DataSource = negocio.listar(where);
                 dataGridViewListar.Columns[6].Visible = false;
@@ -86,15 +83,13 @@ namespace Presentacion
         //Opción de barra de menu Listar Todo
         private void todoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Visibilidad(0);
-            tabControl.SelectedIndex = 1;
+            Visibilidad(0); tabControl.SelectedIndex = 1;
         }
 
         //Opción de barra de menu Listar por ID
         private void iDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Visibilidad(1);
-            tabControl.SelectedIndex = 1;
+            Visibilidad(1); tabControl.SelectedIndex = 1;
             labelListar.Text = IDToolStripMenuItem.Text;
         }
 
@@ -113,13 +108,11 @@ namespace Presentacion
         }
 
         //Opción de barra de menu Listar por Descripcion
-
         private void descripcionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl.SelectedIndex = 1; Visibilidad(1);
             labelListar.Text = descripcionToolStripMenuItem.Text;
         }
-
 
         //Opción de barra de menu Listar por Marca
         private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,14 +137,13 @@ namespace Presentacion
             textBoxPrecioMAX.Text = textBoxPrecioMIN.Text=" ";
         }
 
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e) //Agregar a 
+        //Opcion de barra de menu Agregar articulo
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl.SelectedIndex = 3;
-            Visibilidad(4);
-            comboboxsAdd();
+            Visibilidad(4); comboboxsAdd();
             try{
-                data.setearConsulta("select * from articulos");
-                int UltimaId = 1;
+                data.setearConsulta("select * from articulos"); int UltimaId = 1;
                 data.ejecutarLectura();
                 while (data.Lector.Read()) { UltimaId++; }
                 textBoxIdAdd.Text = UltimaId.ToString();
@@ -159,6 +151,8 @@ namespace Presentacion
             catch (Exception ex) { throw ex; }
             finally { data.cerrarConexion(); }
         }
+        
+        //Opcion de barra de menu Modificar articulo
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl.SelectedIndex = 2;
@@ -168,28 +162,25 @@ namespace Presentacion
             Listarcombobox(ref comboBoxCategMod, "select * from categorias");
         }
 
+        //Opcion de barra de menu Configuracion
         private void configuracionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tabControl.SelectedIndex = 4;
-            Visibilidad(5);
+            tabControl.SelectedIndex = 4; Visibilidad(5);
         }
-
 
         //Agrega los elementos al combobox marca y descripcion de Add
         private void comboboxsAdd()
         {
             if (tabControl.SelectedIndex == 3)
             {
-                //Eliminar componentes de los comboboxs
-                comboBoxMarcaAdd.Items.Clear();
-                comboBoxCategAdd.Items.Clear();
+                comboBoxMarcaAdd.Items.Clear(); comboBoxCategAdd.Items.Clear();
                 Listarcombobox(ref comboBoxMarcaAdd,"select * from marcas");
                 Listarcombobox(ref comboBoxCategAdd, "select * from categorias");
                 buttonAdd.Enabled = false;
             }
         }
 
-        //Verifica si estan completo todos los datos
+        //Verifica si estan completo todos los datos solicitados
         private void changedAddVerific(object sender, EventArgs e)
         {
             int cont = 0;
@@ -206,6 +197,7 @@ namespace Presentacion
                 }
                 catch (Exception ex)
                 {
+                    throw ex;
                     labelUrlAdd.BackColor = Color.Red;
                     pictureBoxAdd.Load("https://png.pngtree.com/png-vector/20190927/ourlarge/pngtree-red-cross-with-the-outline-coming-out-png-image_1761934.jpg");
                 }
@@ -217,7 +209,7 @@ namespace Presentacion
             else { buttonAdd.Enabled = false; }
         }
         
-        //Al precionar Agregar:
+        //Al precionar el boton Agregar
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show
@@ -225,7 +217,6 @@ namespace Presentacion
             switch (resultado.ToString())
             {
                 case "Yes":
-                    //Realizar consulta insert
                     string queryAdd = "insert into articulos values ('";
                     queryAdd += textBoxCodAdd.Text + "','"; queryAdd += textBoxNombreAdd.Text + "','"; queryAdd += textBoxDescripAdd.Text + "',";
                     int cbmarca = comboBoxMarcaAdd.SelectedIndex + 1; queryAdd += cbmarca + ",";
@@ -236,7 +227,6 @@ namespace Presentacion
                     MessageBox.Show("Articulo agregado con exito!");
                 break;
                 case "Cancel":
-                    //Reiniciar campos
                     Visibilidad(4);
                 break;
             }
@@ -247,10 +237,9 @@ namespace Presentacion
         {
            login.ShowDialog();
            if (login.close) { this.Close(); }
-          
         }
         
-        //Se usa para agregar los items al combox en tiempo real
+        //Agregar items al combobox
         private void Listarcombobox(ref ComboBox aux,string consulta){
             try{
                 data.setearConsulta(consulta); data.ejecutarLectura();
@@ -258,15 +247,15 @@ namespace Presentacion
             }catch (Exception ex){ throw ex; } finally{ data.cerrarConexion();}
         }
 
+        //Lista Mod al encontrar un cambio en la consulta
         private void cambioMod(object sender,EventArgs e)
         {
             dataGridMod.DataSource = negocio.listar(condicionMod());
         }
 
-        //Crea el Where de Modificar
+        //Crea el Where de Modificar segun los campos llenados
         private string condicionMod()
         {
-            //Crea la condicion
             bool andc = false; int cont = 0; string queryCondicion = " where ";
             if (textBoxIdMod.Text != "") { queryCondicion += "A.id = " + textBoxIdMod.Text; andc = true; cont++; }
 
@@ -307,39 +296,31 @@ namespace Presentacion
             return queryCondicion;
         }
 
-        //Crear los Where
+        //Crea el Where
         private bool crear_where()
         {
             bool consultar = true;
-
             if (labelListar.Visible && labelListar.Text == "ID" && textBoxListar.TextLength > 0)
             { where = "where A.Id= '" + textBoxListar.Text + "'"; }
-
 
             else if (labelListar.Visible && labelListar.Text == "Codigo" && textBoxListar.TextLength > 0)
             { where = "where A.Codigo like  '%" + textBoxListar.Text + "%'"; }
 
-
             else if (labelListar.Visible && labelListar.Text == "Nombre" && textBoxListar.TextLength > 0)
             { where = "where A.Nombre like '%" + textBoxListar.Text + "%'"; }
-
 
             else if (labelListar.Visible && labelListar.Text == "Descripcion" && textBoxListar.TextLength > 0)
             { where = "where A.Descripcion like '%" + textBoxListar.Text + "%'"; }
 
-
             else if (labelCategorias_o_Marcas.Visible && labelCategorias_o_Marcas.Text == "Marca" && comboBoxCate_Marca.SelectedIndex >= 0)
             { where = "where M.Descripcion = '" + comboBoxCate_Marca.SelectedItem + "'"; }
-
 
             else if (labelCategorias_o_Marcas.Visible && labelCategorias_o_Marcas.Text == "Categoria" && comboBoxCate_Marca.SelectedIndex >= 0)
             { where = "where C.Descripcion = '" + comboBoxCate_Marca.SelectedItem + "'"; }
 
-
             else if (labelRangoPreciolistar.Visible && textBoxPrecioMAX.TextLength > 0 && textBoxPrecioMIN.TextLength > 0 && decimal.Parse(textBoxPrecioMAX.Text) > decimal.Parse(textBoxPrecioMIN.Text))
             { where = "where A.Precio between " + textBoxPrecioMIN.Text + " and " + textBoxPrecioMAX.Text; }
             else consultar = false;
-
             return consultar;
         }
 
@@ -352,6 +333,7 @@ namespace Presentacion
             return opc;
         }
 
+        //Al presionar el boton Modificar / Aplicar
         private void buttonMod_Click(object sender, EventArgs e)
         {
             if (buttonMod.Text == "MODIFICAR")
@@ -362,9 +344,9 @@ namespace Presentacion
              
                 if (cantidadModificar(cant) == true)
                 {
-                    textBoxIdMod.Text = "";         textBoxPrecioMinMod.Text = "";
-                    textBoxPrecioMinMod.Text = "";  textBoxPrecioMaxMod.Text = "";
-                    textBoxPrecioMaxMod.Text = "";  buttonMod.Text = "APLICAR";
+                    textBoxIdMod.Text = "";             textBoxPrecioMinMod.Text = "";
+                    textBoxPrecioMinMod.Text = "";      textBoxPrecioMaxMod.Text = "";
+                    textBoxPrecioMaxMod.Text = "";      buttonMod.Text = "APLICAR";
                     textBoxIdMod.Enabled = true;        textBoxUrlMod.Visible = true;
                     textBoxPrecioMinMod.Enabled = true; textBoxPrecioMinMod.Visible = false;
                     textBoxPrecioMaxMod.Enabled = true; textBoxPrecioMaxMod.Visible = false;
@@ -429,6 +411,7 @@ namespace Presentacion
             }
         }
 
+        //Al presionar el boton Eliminar
         private void buttonDel_Click(object sender, EventArgs e)
         {
             int cant = 0;
@@ -445,6 +428,7 @@ namespace Presentacion
             }
         }
 
+        //Inicio de Colores de botones al pasar el mouse por ensima
         private void buttonBuscar_MouseHover(object sender, EventArgs e){   buttonBuscar.BackColor = Color.Black;}
         private void buttonBuscar_MouseLeave(object sender, EventArgs e){   buttonBuscar.BackColor = Color.DimGray;}
         private void buttonMod_MouseHover(object sender, EventArgs e){      buttonMod.BackColor = Color.Black;}
@@ -453,21 +437,22 @@ namespace Presentacion
         private void buttonDel_MouseLeave(object sender, EventArgs e){      buttonDel.BackColor = Color.DimGray;}
         private void buttonAdd_MouseHover(object sender, EventArgs e){      buttonAdd.BackColor = Color.Black;}
         private void buttonAdd_MouseLeave(object sender, EventArgs e){      buttonAdd.BackColor = Color.DimGray; }
+        //Fin de Colores de botones al pasar el mouse por ensima
 
+        //Validar key's de Id
         private void validacion_keyPressID(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
-                e.Handled = true;
+            if ((tabControl.SelectedIndex == 1 && labelListar.Text == "ID") || tabControl.SelectedIndex == 2 || tabControl.SelectedIndex == 3)
+                if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8) e.Handled = true;
         }
-
-  
-
+        
+        //Validar key's de Precio
         private void validacion_keyPressPrecio(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8 && e.KeyChar != 46)
-                e.Handled = true;
+            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8 && e.KeyChar != 46) e.Handled = true;
         }
 
+        //Lista los detalles al clickear sobre una celda
         private void dataGridViewListar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Int32 selectedCellCount = dataGridViewListar.GetCellCount(DataGridViewElementStates.Selected);
@@ -475,10 +460,7 @@ namespace Presentacion
             if (selectedCellCount > 0)
             {
                 new System.Text.StringBuilder();
-                for (int i = 0; i < selectedCellCount; i++)
-                {
-                    fila = dataGridViewListar.SelectedCells[i].RowIndex;
-                }
+                for (int i = 0; i < selectedCellCount; i++){ fila = dataGridViewListar.SelectedCells[i].RowIndex;}
                 detalles.id(dataGridViewListar[0, fila].Value.ToString());
                 detalles.cod(dataGridViewListar[1, fila].Value.ToString());
                 detalles.nombre(dataGridViewListar[2, fila].Value.ToString());
@@ -487,11 +469,11 @@ namespace Presentacion
                 detalles.categ(dataGridViewListar[5, fila].Value.ToString());
                 detalles.imagen(dataGridViewListar[6, fila].Value.ToString());
                 detalles.precio(dataGridViewListar[7, fila].Value.ToString());
-
                 detalles.ShowDialog();
             }
         }
 
+        //Verifica que opcion se encuentra en configuracion
         private void cambiocheck(object sender, EventArgs e)
         {
             Visibilidad(5);
@@ -507,6 +489,7 @@ namespace Presentacion
             }
         }
 
+        //Verifica si todos los campos estan completos en configuracion
         private void cambioConfig(object sender,EventArgs e)
         {
             if (radioButtonCamb.Checked == true && textBoxUserAct.Text != "" && textBoxUserNew.Text != "" && textBoxPassAct.Text != "" && textBoxPassNew.Text != "") { buttonConf.Enabled = true; }
@@ -514,12 +497,14 @@ namespace Presentacion
             else { buttonConf.Enabled = false; }
         }
 
+        //Crea la clase usuarios para almacenar los User y Pass
         class usuarios
         {
             public string us { get; set; }
             public string pss { get; set; }
         }
 
+        //Al precionar el boton conf - Asi mismo crea un respaldo de User y Pass
         private void buttonConf_Click(object sender, EventArgs e)
         {
             bool user = false; bool error = true;
@@ -531,8 +516,7 @@ namespace Presentacion
                 while ((text = archivo.ReadLine()) != null)
                 {
                     x++;
-                    if (x % 2 != 0){
-                        users = text;
+                    if (x % 2 != 0){ users = text;
                         if (textBoxUserAct.Text == text){ user = true;}
                     }
                     else
@@ -556,6 +540,7 @@ namespace Presentacion
                                     escribir.WriteLine(listaUser[z].pss);
                                 }
                                 MessageBox.Show("Cambios agregados correctamente");
+                                listaUser.Clear();
                             }
                         }
                         else{ user = false;}

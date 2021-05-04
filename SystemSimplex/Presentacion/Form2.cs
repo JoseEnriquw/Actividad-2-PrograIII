@@ -17,6 +17,7 @@ namespace Presentacion
             InitializeComponent();
         }
 
+        //Se cargan los datos solicitados al formulario de previsualizacion
         public void id(string id) { textBoxIdDetalles.Text = id; }
         public void cod(string cod) { textBoxCodDetalles.Text = cod; }
         public void nombre(string nombre) { textBoxNombreDetalles.Text = nombre; }
